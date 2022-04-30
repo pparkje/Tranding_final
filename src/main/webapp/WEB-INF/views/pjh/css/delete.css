@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+.mainAA {
+	width: 100%;
+	min-height:1000px;
+	margin-top: 100px;
+}
+.mainAA_A {
+	min-height: 1000px;
+    width: 920px;
+    margin: auto;
+}
+.textBox_A {
+	width: 900px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #eee;
+	margin-top: 50px; 
+	margin: auto;
+	text-align: center;
+}
+.redtext {
+	width: 900px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	color: red;
+	margin: auto;
+	text-align: center;
+}
+
+.text_cont {
+	width: 900px;
+	height: 70px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #eee;
+	margin: auto;
+	font-size: 15px;
+}
+.text_cont_A {
+	width: 900px;
+	height: 50px;
+	line-height: 25px;
+	text-align: center;
+	background-color: #eee;
+	margin: auto;
+	font-size: 15px;
+	padding-top: 10px;
+}
+.textBox2 {
+	width: 900px;
+	height: 450px;
+	margin: auto;
+	border: 1px solid #ccc;
+	margin-top: 50px;
+}
+.textBox2_A {
+	width: 900px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+.form_A input {
+	margin: 20px 0 0 20px;
+	
+}
+
+.gita {
+	margin: 20px 0 -20px 20px;
+}
+
+.lastBox {
+	width: 650px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.pass_word_A {
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.lastBox input {
+	margin-left: 0px;
+}
+
+.hh_AA {
+	width: 900px;
+	height: 100px;
+	line-height: 50px;
+	margin-top: 100px;
+}
+
+.hwak_A {
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-left: 20px;
+}
+
+.hwak_A button {
+	width: 70px;
+	height: 50px;
+	background-color: skyblue;
+	border: none;
+}
+
+.hwak_B {
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-left: 20px;
+}
+
+.hwak_B button {
+	width: 70px;
+	height: 50px;
+	background-color: #ccc;
+	border: none;
+}
+
+.textBox {
+	width: 900px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin: auto;
+}

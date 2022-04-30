@@ -1,0 +1,133 @@
+/** 본문영역 */
+.body {
+    margin-top: 200px;
+    width: 100%;
+    height: 2400px;
+    background-color: red;
+}
+
+/** 본문안에 목록영역 */
+.product_box {
+    margin: auto;
+    width: 1400px;
+    height: 1200px;
+    background-color: green;
+}
+
+/** 베스트상품 -시작-*/
+/** 목록안에 베스트 상품영역 */
+/** 여기 height 높이를 올리면 더보기 상자 내려감. 나중에 클릭하면 높이 조정 필요 */
+.best_product {
+    width: 1400px;
+    height: 2220px;
+    background-color: pink;
+    position: relative;
+}
+
+/** 베스트 상품영역 물품리스트영역 */
+.object_list1 {
+    width: 1400px;
+    height: 950px;
+    background-color: blue;
+    position: absolute;
+    top: 150px;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+/** 베스트 상품영역 */
+/** 텍스트 */
+.best_product_title {
+    display: block;
+    width: 180px;
+    height: 35px;
+    background-color: orange;
+    position: absolute;
+    top: 35px;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "고딕";
+}
+
+.text_a {
+    font-size: 15px;
+    position: absolute;
+    top: 75px;
+    color: rgb(48, 48, 48);
+}
+
+/** 베스트 상품영역의 카테고리 */
+
+
+.product_list {
+    width: 1400px;
+    background-color: green;
+}
+
+/** 상품리스트 */
+.product1 {
+    width: 270px;
+    height: 400px;
+    background-color: silver;
+    margin-right: 10px;
+}
+
+.product2 {
+    width: 270px;
+    height: 400px;
+    background-color: silver;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+/** 상품이미지 및 텍스트 */
+.product_img {
+    width: 270px;
+    height: 300px;
+    background-color: yellow;
+}
+
+/** 더보기 버튼 */
+.all_view {
+    display: block;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+    border: 1px solid black;
+
+    background-color: pink;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.all_view a {
+    display: block;
+    width: 250px;
+    height: 40px;
+}
+
+/** 드롭아웃 */
+.drop_out1 {
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 105px;
+}
+
+.drop_out2 {
+    display: block;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 105px;
+    right: 10px;
+}

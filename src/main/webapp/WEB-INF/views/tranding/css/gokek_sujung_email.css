@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+.sujung_emailA {
+	width: 1000px;
+	height: 1200px;
+	margin-left: 300px;
+}
+
+.sujung_user_email {
+	width: 650px;
+	height: 1200px;
+}
+
+.sujung_topA {
+	width: 650px;
+	height: 100px;
+	font-weight: bold;
+	font-size: 30px;
+}
+/* 아이디 입력란 */
+.sujung_idA {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_idA div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_idA div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_idA_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 이메일 주소 입력란 */
+.sujung_email_address {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_email_address div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_email_address div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_email_address_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 제목 입력란 */
+.sujung_subject {
+	width: 650px;
+	height: 150px;
+}
+
+.sujung_subject div:nth-child(1) {
+	width: 200px;
+	height: 150px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 150px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_subject div:nth-child(2) {
+	width: 300px;
+	height: 150px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_subject_A textarea {
+	width: 250px;
+	height: 100px;
+	border: 1px solid #ccc;
+	margin-bottom: 25px;
+	margin-left: 30px;
+	margin-top: 25px;
+}
+
+.sujung_subject_A input {
+	width: 250px;
+	height: 100px;
+	border: 1px solid #ccc;
+	margin-bottom: 25px;
+	margin-left: 30px;
+	margin-top: 25px;
+}
+
+/* 내용 입력란 */
+.sujung_content {
+	width: 650px;
+	height: 300px;
+}
+
+.sujung_content div:nth-child(1) {
+	width: 200px;
+	height: 300px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 300px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_content div:nth-child(2) {
+	width: 300px;
+	height: 300px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+.sujung_content_A textarea {
+	display: block;
+	width: 250px;
+	height: 250px;
+	border: 1px solid #ccc;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+	white-space: pre-line;
+	font-size: 13px;
+}
+
+.sujung_content_A input {
+	display: block;
+	width: 250px;
+	height: 250px;
+	border: 1px solid #ccc;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+	white-space: pre-line;
+	font-size: 13px;
+}
+
+/* 완료 버튼  */
+.sujung_clearA {
+	width: 650px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+}
+
+.sujung_clearA button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.sujung_clearA button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+

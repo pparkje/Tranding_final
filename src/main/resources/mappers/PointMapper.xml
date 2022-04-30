@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="PointMapper">
+	<resultMap id="PointMap"
+		type="study.spring.trspring.model.Point">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="p_cont" column="p_cont" />
+		<result property="p_pointdate" column="p_pointdate" />
+		<result property="p_endpoint" column="p_endpoint" />
+		<result property="p_m_id" column="p_m_id" />
+		<result property="p_point" column="p_point" />
+		<result property="p_mid" column="p_mid" />
+		<result property="p_total_point" column="p_total_point" />
+	</resultMap>
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Point"
+		resultMap="PointMap">
+		SELECT id,p_cont,p_pointdate,p_endpoint,p_m_id,p_point,p_mid,p_total_point
+		FROM point
+		WHERE p_m_id=#{p_m_id}
+	</select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Point"
+		resultMap="PointMap">
+		SELECT  id,p_cont,p_pointdate,p_endpoint,p_m_id,p_point,p_mid,p_total_point
+		FROM point
+		
+		<where>
+			<if test="p_m_id != null and p_m_id != ''">
+				p_m_id LIKE concat('%', #{p_m_id}, '%')
+			</if>
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Point"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO point (
+		p_cont,p_pointdate,p_endpoint,p_m_id,p_point,p_mid,p_total_point
+		) 
+		VALUES (
+		#{p_cont},#{p_pointdate},DATE_ADD(#{p_pointdate} , INTERVAL 3 MONTH) ,#{p_m_id},#{p_point},#{p_mid},#{p_total_point}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Point">
+		DELETE FROM point  where id = #{id}
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Point">
+		UPDATE point SET 
+		p_cont=#{p_cont},p_pointdate=#{p_pointdate},p_endpoint=#{p_endpoint},p_m_id=#{p_m_id},p_point=#{p_point},p_mid=#{p_mid}
+		,p_total_point=#{p_total_point}
+		WHERE id=#{id}
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Point"
+		resultType="int">
+		SELECT COUNT(*) FROM point
+		<where>
+			<if test="p_m_id != null and p_m_id != ''">
+				p_m_id LIKE concat('%', #{p_m_id}, '%')
+			</if>
+		</where>
+	</select>
+</mapper>

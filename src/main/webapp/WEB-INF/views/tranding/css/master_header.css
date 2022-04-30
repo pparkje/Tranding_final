@@ -1,0 +1,154 @@
+	/** 공통 속성 설정*/
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /** float 처리 */
+    .pull-left {
+        float: left;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        float: none;
+    }
+    
+    /** header : title, button -시작- */
+    .title_and_button {
+        width: 100%;
+        height: 79px;
+        background-color: rgb(250, 250, 250);
+        border-bottom: 1px solid rgb(200, 200, 200);
+    }
+
+    /** 전체 button 속성 */
+    .button_property1 {
+        height: 35px;
+        background-color: rgb(192, 57, 43);
+        color: white;
+        border-radius: 5px;
+    }
+
+    .button_property2 {
+        height: 35px;
+        background-color: rgb(94, 94, 94);
+        color: white;
+        border-radius: 5px;
+    }
+
+    .button_a1 {
+        width: 80px;
+    }
+
+    .button_a2 {
+        width: 120px;
+    }
+
+    .button_a3 {
+        width: 80px;
+    }
+
+    .button_a4 {
+        width: 80px;
+    }
+
+    .title_text {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 80px;
+        margin-left: 30px;
+    }
+
+    .button_place {
+        width: 500px;
+        height: 35px;
+        /*background-color: pink;*/
+        margin-top: 20px;
+        position: absolute;
+        right: 260px;
+        text-align: right;
+    }
+
+    /** header : title, button -끝- */
+
+
+    /** 관리자 top css */
+    .top_box1 {
+        width: 100%;
+        height: 55px;
+        background-color: rgb(53, 152, 220);
+        border-radius: 5px;
+        overflow: hidden;
+        position: fixed;
+        top: 0px;
+        z-index: 9999;
+    }
+
+    .box1_top {
+        display: block;
+        width: auto;
+        height: 55px;
+        position: relative;
+    }
+
+    .top_box1 .box1_text {
+        display: block;
+        height: 55px;
+        width: 60px;
+        text-align: center;
+        line-height: 55px;
+        /**background-color: red;*/
+        color: white;
+        margin-left: 10px;
+    }
+
+    .top_box1 div {
+        float: left;
+    }
+
+    /** float 마감처리 */
+    .top_box1:after {
+        content: '';
+        clear: both;
+        float: none;
+        display: block;
+    }
+
+    .top_box2 {
+        height: 80px;
+        width: 100%;
+        position: fixed;
+        left: 212px;
+        top: 55px;
+        /*background-color: pink;*/
+    }
+
+    /** top 상단 home이미지 */
+    .home_img {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 200px;
+    }
+
+    /** 드롭아웃 css */
+    .drop_out {
+        display: block;
+        height: 55px;
+        position: absolute;
+        right: 70px;
+        font-size: 14px;
+    }

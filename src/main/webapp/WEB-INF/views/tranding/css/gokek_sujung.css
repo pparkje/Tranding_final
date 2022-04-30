@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+.sujung_su {
+	width: 650px;
+	height: 1200px;
+	margin-left: 300px;
+}
+
+.sujung_top {
+	width: 650px;
+	height: 100px;
+	font-weight: bold;
+	font-size: 30px;
+}
+/* 이름 수정 */
+.sujung_name {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_name div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_name div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_name_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 아이디 수정 */
+.sujung_id {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_id div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_id div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_id_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 닉네임 수정 */
+.sujung_nick {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_nick div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_nick div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_nick_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 휴대폰번호 수정 */
+.sujung_phone {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_phone div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_phone div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_phone_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 닉네임 수정 */
+.sujung_nick {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_nick div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_nick div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_nick_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 전화번호 수정 */
+.sujung_phoneA {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_phoneA div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_phoneA div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_phoneA_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 닉네임 수정 */
+.sujung_nick {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_nick div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_nick div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_nick_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 주소 수정 */
+.sujung_address {
+	width: 650px;
+	height: 200px;
+}
+
+.sujung_address div:nth-child(1) {
+	width: 200px;
+	height: 200px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_address div:nth-child(2) {
+	width: 300px;
+	height: 200px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.sujung_address_A input:nth-child(1) {
+	width: 130px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 28px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.sujung_address_A button {
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 30px;
+	margin-bottom: 23px;
+	margin-left: 15px;
+}
+
+.sujung_address_A input:nth-child(3) {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.sujung_address_A input:nth-child(4) {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* sujung_user_sangte 수정 */
+.sujung_user_sangte {
+	width: 650px;
+	height: 100px;
+}
+
+.sujung_user_sangte div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.sujung_user_sangte_A  {
+	width: 250px;
+	height: 100px;
+	float: left;
+	border-bottom: 1px solid #444;
+}
+
+.sangte_user {
+	width: 100px;
+	height: 30px;
+	border: 1px soild #444;
+	margin-top: 35px;
+	margin-left: 30px;
+}
+
+/* 수정완료 버튼  */
+.sujung_clear {
+	width: 650px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+}
+
+.sujung_clear button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.sujung_clear button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+

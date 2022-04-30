@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="QnaMapper">
+	<!-- Beans 클래스의 객체이름(id)과 클래스이름(type)을 명시한다. -->
+    <resultMap id="qnaMap" type="study.spring.trspring.model.Qna">
+        <!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+        <result property="id" column="id" />
+        <result property="q_subject" column="q_subject" />
+        <result property="q_image" column="q_image" />
+        <result property="q_cont" column="q_cont" />
+        <result property="q_answer_ch" column="q_answer_ch" />
+        <result property="q_answer" column="q_answer" />
+        <result property="q_pname" column="q_pname" />
+        <result property="m_username" column="m_username" />
+        <result property="m_id" column="m_id" />
+        <result property="m_email" column="m_email" />
+        <result property="m_phone" column="m_phone" />
+        
+    </resultMap>
+    
+    
+    <!-- 단일행 조회를 위한 기능 정의 -->
+    <select id="selectItem" parameterType="study.spring.trspring.model.Qna" resultMap="qnaMap">
+        SELECT id, q_subject, q_image, q_cont, q_answer_ch, q_answer, q_pname FROM qna WHERE id=#{id};
+    </select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 -->
+    <select id="selectList" parameterType="study.spring.trspring.model.Qna" resultMap="qnaMap">
+        SELECT id, q_subject, q_image, q_cont, q_answer_ch, q_answer, q_pname FROM qna
+        <where>
+            <if test="q_subject != null and q_subject != ''">
+                q_subject LIKE concat('%', #{q_subject}, '%')
+            </if>
+            <if test="q_image != null and q_image != ''">
+                AND q_image LIKE concat('%', #{q_image}, '%')
+            </if>
+            <if test="q_cont != null and q_cont != ''">
+                AND q_cont LIKE concat('%', #{q_cont}, '%')
+            </if>
+            <if test="q_answer_ch != null and q_answer_ch != ''">
+                AND q_answer_ch LIKE concat('%', #{q_answer_ch}, '%')
+            </if>
+            <if test="q_answer != null and q_answer != ''">
+                AND q_answer LIKE concat('%', #{q_answer}, '%')
+            </if>
+            <if test="q_pname != null and q_pname != ''">
+                AND q_pname LIKE concat('%', #{q_pname}, '%')
+            </if>
+        </where>
+        ORDER BY id DESC
+        
+        <if test="listCount > 0">
+        	LIMIT #{offset}, #{listCount}
+        </if>
+    </select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem" parameterType="study.spring.trspring.model.Qna" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO qna (q_subject, q_image, q_cont, q_answer_ch, q_answer, q_pname, members_id) VALUES (#{q_subject}, #{q_image}, #{q_cont}, #{q_answer_ch}, #{q_answer}, #{q_pname}, #{m_id});
+	</insert>
+	
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem" parameterType="study.spring.trspring.model.Qna">
+		DELETE FROM qna WHERE id=#{id};
+	</delete>
+	
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem" parameterType="study.spring.trspring.model.Qna">
+		UPDATE qna SET q_subject=#{q_subject}, q_image=#{q_image}, q_cont=#{q_cont}, q_answer_ch=#{q_answer_ch}, q_answer=#{q_answer}, q_pname=#{q_pname} WHERE id=#{id};
+	</update>
+	
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll" parameterType="study.spring.trspring.model.Qna" resultType="int">
+        SELECT COUNT(*) FROM qna
+        <where>
+            <if test="q_subject != null and q_subject != ''">
+                q_subject LIKE concat('%', #{q_subject}, '%')
+            </if>
+            <if test="q_image != null and q_image != ''">
+                OR q_image LIKE concat('%', #{q_image}, '%')
+            </if>
+            <if test="q_cont != null and q_cont != ''">
+                OR q_cont LIKE concat('%', #{q_cont}, '%')
+            </if>
+            <if test="q_answer_ch != null and q_answer_ch != ''">
+                OR q_answer_ch LIKE concat('%', #{q_answer_ch}, '%')
+            </if>
+            <if test="q_answer != null and q_answer != ''">
+                OR q_answer LIKE concat('%', #{q_answer}, '%')
+            </if>
+            <if test="q_pname != null and q_pname != ''">
+                OR q_pname LIKE concat('%', #{q_pname}, '%')
+            </if>
+        </where>
+    </select>
+    
+    <!-- 문의랑 회원을 join으로 단일행 조회를 위한 기능 정의 -->
+    <select id="selectQnaItem" parameterType="study.spring.trspring.model.Qna" resultMap="qnaMap">
+        SELECT qna.id, qna.q_subject, qna.q_image AS 'q_image', qna.q_cont, qna.q_pname, qna.q_subject, qna.q_answer_ch, members.m_username AS 'm_username', members.id AS 'm_id', members.m_email AS 'm_email', members.m_phone AS 'm_phone' FROM qna INNER JOIN members ON qna.members_id = members.id WHERE qna.id=#{id};
+    </select>
+	
+	<!-- 문의랑 회원을 join으로 다중행 조회를 위한 기능 정의 -->
+    <select id="selectQnaList" parameterType="study.spring.trspring.model.Qna" resultMap="qnaMap">
+        SELECT qna.id, qna.q_subject, qna.q_image AS 'q_image', qna.q_cont, qna.q_pname, qna.q_subject, qna.q_answer_ch, members.m_username AS 'm_username', members.id AS 'm_id', members.m_email AS 'm_email', members.m_phone AS 'm_phone' FROM qna INNER JOIN members ON qna.members_id = members.id
+        <where>
+            <if test="m_username != null and m_username != ''">
+                m_username LIKE concat('%', #{m_username}, '%')
+            </if>
+            <if test="q_pname != null and q_pname != ''">
+                OR qna.q_pname LIKE concat('%', #{q_pname}, '%')
+            </if>
+        </where>
+        ORDER BY id DESC
+        
+        <if test="listCount > 0">
+        	LIMIT #{offset}, #{listCount}
+        </if>
+    </select>
+    
+</mapper>

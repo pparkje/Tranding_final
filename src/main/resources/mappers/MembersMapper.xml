@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="MembersMapper">
+	<resultMap id="MembersMap"
+		type="study.spring.trspring.model.Members">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="m_id" column="m_id" />
+		<result property="m_pw" column="m_pw" />
+		<result property="m_name" column="m_name" />
+		<result property="m_username" column="m_username" />
+		<result property="m_email" column="m_email" />
+		<result property="m_phone" column="m_phone" />
+		<result property="m_birthday" column="m_birthday" />
+		<result property="m_email_agree" column="m_email_agree" />
+		<result property="m_address" column="m_address" />
+		<result property="m_modifydate" column="m_modifydate" />
+		<result property="m_joindate" column="m_joindate" />
+		<result property="m_enddate" column="m_enddate" />
+		<result property="m_end" column="m_end" />
+		<result property="m_point" column="m_point" />
+		<result property="m_gender" column="m_gender" />
+		<result property="m_memo" column="m_memo" />
+		<result property="m_postcode" column="m_postcode" />
+		<result property="check" column="check" typeHandler="org.apache.ibatis.type.ArrayTypeHandler" />
+		<result property="checkA" column="checkA" />
+	</resultMap>
+	
+
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT id ,m_id, m_pw, m_name, m_username, m_email, m_phone, 
+		m_birthday, m_email_agree, m_address, m_modifydate, m_joindate, m_enddate, m_end, m_point, m_gender,m_memo,m_postcode
+		FROM members
+		<where>
+			<if test="id != null and id != ''">
+				id = #{id}
+			</if>
+			
+			<if test="m_id != null and m_id != ''">
+				m_id LIKE concat('%', #{m_id}, '%')
+			</if>
+		
+			<if test="m_id != null and m_id != '' and id == null and id == '' ">
+				m_id LIKE concat('%', #{m_id}, '%')
+			</if>
+			
+			<if test="m_id != null and m_id != '' and id != null and id != '' ">
+				AND m_id LIKE concat('%', #{m_id}, '%')
+			</if>
+		</where>
+	</select>
+
+	
+	<!-- 탈퇴여부 조회를 위한 기능 정의 -->
+	<select id="selectItemTal"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT id ,m_id, m_pw, m_name, m_username, m_email, m_phone, 
+		m_birthday, m_email_agree, m_address, m_modifydate, m_joindate, m_enddate, m_end, m_point ,m_gender,m_memo,m_postcode
+		FROM members
+		<where>
+			<if test="m_id != null and m_id != ''">
+				m_id=#{m_id}
+			</if>
+		</where>
+	</select>
+	
+	<select id="cartPage"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT m_id FROM members WHERE m_id=#{m_id}
+	</select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT id ,m_id, m_pw, m_name, m_username, m_email, m_phone, 
+		m_birthday, m_email_agree, m_address, m_modifydate, m_joindate, m_enddate, m_end, m_point ,m_gender,m_memo,m_postcode
+		FROM members
+		<where>
+			<if test="m_name != null and m_name != ''">
+				m_name LIKE concat('%', #{m_name}, '%')
+			</if>
+			<if test="m_id != null and m_id != ''">
+				m_id LIKE concat('%', #{m_id}, '%')
+			</if>
+			<if test="m_pw != null and m_pw != ''">
+				m_pw LIKE concat('%', #{m_pw}, '%')
+			</if>
+			<if test="m_phone != null and m_phone != ''">
+				m_phone LIKE concat('%', #{m_phone}, '%')
+			</if>
+		</where>
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Members"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO members (
+		m_id, m_pw, m_name, m_username, m_email, m_phone, 
+		m_birthday, m_email_agree, m_address, m_modifydate, m_joindate, m_enddate,
+		m_end, m_point ,m_gender,m_memo,m_postcode
+		) 
+		VALUES (
+		#{m_id}, md5(#{m_pw}) ,#{m_name},#{m_username},#{m_email},#{m_phone},
+		#{m_birthday},#{m_email_agree},#{m_address},DATE_FORMAT(now(), '%Y-%m-%d') ,DATE_FORMAT(now(), '%Y-%m-%d'),NULL, 
+		'N' ,#{m_point} ,#{m_gender}, #{m_memo}, #{m_postcode}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Members">
+		DELETE FROM members WHERE id=#{id}
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Members">
+		UPDATE members SET 
+		id=#{id}, m_id=#{m_id}, m_pw=#{m_pw}, m_name=#{m_name}, m_username=#{m_username}, m_email=#{m_email}, 
+        m_phone=#{m_phone}, m_birthday=#{m_birthday}, m_email_agree=#{m_email_agree}, m_address=#{m_address}, 
+        m_modifydate=#{m_modifydate}, m_joindate=#{m_joindate}, m_enddate=#{m_enddate}, 
+        m_end=#{m_end}, m_point=#{m_point},m_gender=#{m_gender},m_memo=#{m_memo},m_postcode=#{m_postcode}
+		WHERE id=#{id}
+	</update>
+	
+	<!-- 회원 수정을 위한 기능 정의 -->
+	<update id="updateItemSujung"
+		parameterType="study.spring.trspring.model.Members">
+		UPDATE members SET 
+		m_id=#{m_id}, m_name=#{m_name}, m_username=#{m_username}, m_email=#{m_email}, 
+        m_phone=#{m_phone}, m_birthday=#{m_birthday}, m_address=#{m_address}, 
+        m_modifydate=DATE_FORMAT(now(), '%Y-%m-%d'),m_gender=#{m_gender},m_postcode=#{m_postcode}
+		WHERE id=#{id}
+	</update>
+	
+	<!-- 비밀변호 변경을 위한 기능 정의 -->
+	<update id="updateItemBibun"
+		parameterType="study.spring.trspring.model.Members">
+		UPDATE members SET 
+		m_pw=md5(#{m_pw})
+		WHERE id=#{id} AND m_id=#{m_id}
+	</update>
+	
+	<!-- 회원탈퇴를 위한 기능 정의 -->
+	<update id="updateItemTal"
+		parameterType="study.spring.trspring.model.Members">
+		UPDATE members SET 
+        m_modifydate=DATE_FORMAT(now(), '%Y-%m-%d'), m_enddate=DATE_FORMAT(now(), '%Y-%m-%d'), 
+        m_end=#{m_end},m_memo=#{m_memo}
+		WHERE id=#{id} AND m_id=#{m_id} AND m_pw=md5(#{m_pw})
+	</update>
+	
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Members"
+		resultType="int">
+		SELECT COUNT(*) FROM members
+		<where>
+			<if test="m_name != null and m_name != ''">
+				m_name LIKE concat('%', #{m_name}, '%')
+			</if>
+			<if test="m_id != null and m_id != ''">
+				m_id LIKE concat('%', #{m_id}, '%')
+			</if>
+			<if test="m_pw != null and m_pw != ''">
+				m_pw LIKE concat('%', #{m_pw}, '%')
+			</if>
+			<if test="m_phone != null and m_phone != ''">
+				m_phone LIKE concat('%', #{m_phone}, '%')
+			</if>
+		</where>
+	</select>
+
+	<!-- 로그인 여부 확인 위한 기능 정의  -->
+	<!-- 탈퇴여부 조회하기 -->
+	<select id="selectCountAllTal"
+		parameterType="study.spring.trspring.model.Members"
+		resultType="int">
+		SELECT COUNT(*) FROM members WHERE m_id=#{m_id} AND m_end='N'
+		
+	</select>
+	<!-- 로그인을 위한 기능 정의 -->
+	<select id="idCount"
+		parameterType="study.spring.trspring.model.Members"
+		resultType="int">
+		SELECT COUNT(*) FROM members WHERE m_id=#{m_id} AND m_pw=md5(#{m_pw})
+	</select>
+	<!-- id값 조회를 위한 기능 정의 -->
+	<select id="idItem"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT id ,m_id, m_pw FROM members WHERE m_id=#{m_id} AND m_pw=md5(#{m_pw})
+	</select>
+	<!-- 포인트합을 위한 기능 정의 -->
+	<select id="pointItem"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT * FROM members WHERE m_id IN 
+		
+		<if test="check != null and check != '' " >
+		
+			<foreach collection="check" item="check" open="(" close=")" separator=",">
+				#{check}
+			</foreach>
+			
+		</if>
+		
+		ORDER BY FIELD 
+		
+		<if test="check != null and check != '' " >
+		
+			<foreach collection="check" item="check" open="(m_id," close=")" separator=",">
+				#{check}
+			</foreach>
+			
+		</if>
+		
+	</select>
+	<!-- 포인트 수정을 위한 기능 정의 -->
+	<update id="updateItemPoint"
+		parameterType="study.spring.trspring.model.Members">
+		UPDATE members SET 
+        m_point=#{m_point}
+		WHERE m_id=#{m_id}
+	</update>
+	<select id="selectItemPoint"
+		parameterType="study.spring.trspring.model.Members"
+		resultMap="MembersMap">
+		SELECT * FROM members
+		<where>
+			<if test="m_id != null and m_id != ''">
+				m_id = #{m_id}
+			</if>
+		</where>
+	</select>
+	<!-- 비밀번호 재설정 1을 위한 기능 정의 -->
+	<select id="passwordCountA"
+		parameterType="study.spring.trspring.model.Members"
+		resultType="int">
+		SELECT COUNT(*) FROM members WHERE m_id=#{m_id} 
+	</select>
+
+</mapper>

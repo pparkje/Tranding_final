@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+.cash_sujung_cash {
+	width: 1000px;
+	height: 1300px;
+	margin-left: 250px;
+}
+
+.cash_sujung_top{
+ 	width: 1000px;
+ 	height: 100px;
+ 	font-size: 30px;
+ 	font-weight: bold;
+ 	line-height: 100px;	
+}
+
+/* 주문정보란 영역  */
+.jumun_imfor {
+	width: 1000px;
+	height: 30px;
+}
+
+.jumun_imformation {
+	width: 1000px;
+	height: 50px;
+	background-color: #ccc;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.cash_name_cash {
+	width: 650px;
+	height: 100px;
+}
+
+.cash_name_cash div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_name_cash div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.cash_sujung_name_A input{
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+/* 주문금액 영역  */
+.cash_jumun_cash {
+	width: 650px;
+	height: 100px;
+}
+
+.cash_jumun_cash div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_jumun_cash div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.cash_jumun_cash_A input{
+	width: 230px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 주문번호 영역  */
+
+.cash_jumun_number {
+	width: 650px;
+	height: 100px;
+}
+
+.cash_jumun_number div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_jumun_number div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.cash_jumun_number_A input{
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 결제 정보란 영역  */
+
+.cash_jungbo_ca {
+	width: 1000px;
+	height: 30px;
+	margin-top: 50px;
+}
+
+.cash_jungbo_cash {
+	width: 1000px;
+	height: 50px;
+	background-color: #ccc;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+/* 결제금액란 영역 */
+.cash_jumun_gold {
+	width: 650px;
+	height: 100px;
+}
+
+.cash_jumun_gold div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_jumun_gold div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.cash_jumun_gold_A input{
+	width: 230px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 결제 방법 영역  */
+
+.cash_jumun_way {
+	width: 650px;
+	height: 100px;
+}
+
+.cash_jumun_way div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_jumun_way div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.cash_jumun_way_A input{
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/*  결제일시 영역  */
+
+.cash_jumun_date {
+	width: 650px;
+	height: 100px;
+}
+
+.cash_jumun_date div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_jumun_date div:nth-child(2) {
+	width: 300px;
+	height: 50px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+}
+
+.cash_jumun_date_A input{
+	width: 150px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.cash_jumun_date_B {
+	width: 300px;
+	height: 50px;
+	border-bottom: 1px solid #333;
+	float: left;
+	padding-right: 45px;
+}
+
+.cash_jumun_date_B button{
+	width: 120px;
+	height: 30px;
+	float: left;
+	margin-left: 30px;
+} 
+
+/*  상점메모 영역 */
+
+.cash_jumun_memo {
+	width: 650px;
+	height: 200px;
+}
+
+.cash_jumun_memo div:nth-child(1) {
+	width: 200px;
+	height: 200px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.cash_jumun_memo div:nth-child(2) {
+	width: 300px;
+	height: 200px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.cash_jumun_memo_A textarea {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #ccc;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.cash_sujung_finish {
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+}
+
+.cash_sujung_finish button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.cash_sujung_finish button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+
+
+
+
+
+

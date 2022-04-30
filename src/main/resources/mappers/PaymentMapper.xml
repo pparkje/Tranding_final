@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="PaymentMapper">
+	<resultMap id="PaymentMap"
+		type="study.spring.trspring.model.Payment">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="p_num" column="p_num" />
+		<result property="p_inputdate" column="p_inputdate" />
+		<result property="p_money_a" column="p_money_a" />
+		<result property="p_money_b" column="p_money_b" />
+		<result property="p_point_a" column="p_point_a" />
+		<result property="p_cancle_money" column="p_cancle_money" />
+		<result property="p_smoney" column="p_smoney" />
+		<result property="p_memo" column="p_memo" />
+		<result property="p_bank" column="p_bank" />
+		<result property="p_pay" column="p_pay" />
+		<result property="p_pay_name" column="p_pay_name" />
+		<result property="p_all_money" column="p_all_money" />
+		<result property="p_m_id" column="p_m_id" />
+		<result property="p_pay_yes" column="p_pay_yes" />
+		<result property="p_g_id" column="p_g_id" />
+		<result property="p_cancle" column="p_cancle" />
+		<result property="p_o_id" column="p_o_id" />
+	</resultMap>
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Payment"
+		resultMap="PaymentMap">
+		SELECT 
+			id,p_num,p_inputdate,p_money_a,p_money_b,p_point_a,
+			p_cancle_money,p_smoney,p_memo,p_bank,p_pay,p_pay_name,
+			p_all_money,p_m_id,p_pay_yes,p_g_id,p_cancle,p_o_id
+		FROM payment
+		<where>
+			<if test="id != null and id != ''">
+				id = #{id}
+			</if>
+			<if test="p_o_id != null and p_o_id != ''">
+				p_o_id LIKE concat('%', #{p_o_id}, '%')
+			</if>
+		</where>
+	</select>
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Payment"
+		resultMap="PaymentMap">
+		SELECT  
+			id,p_num,p_inputdate,p_money_a,p_money_b,p_point_a,
+			p_cancle_money,p_smoney,p_memo,p_bank,p_pay,p_pay_name,
+			p_all_money,p_m_id,p_pay_yes,p_g_id,p_cancle,p_o_id
+		FROM payment
+		
+		<where>
+			<if test="p_pay_name != null and p_pay_name != ''">
+				p_pay_name LIKE concat('%', #{p_pay_name}, '%')
+			</if>
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Payment"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO payment (
+			p_num,p_inputdate,p_money_a,p_money_b,p_point_a,
+			p_cancle_money,p_smoney,p_memo,p_bank,p_pay,p_pay_name,
+			p_all_money,p_m_id,p_pay_yes,p_g_id,p_cancle,p_o_id
+		) 
+		VALUES (
+		#{p_num},#{p_inputdate},#{p_money_a},#{p_money_b},#{p_point_a},
+		#{p_cancle_money},#{p_smoney},#{p_memo},#{p_bank},#{p_pay},#{p_pay_name},
+		#{p_all_money},#{p_m_id},#{p_pay_yes},#{p_g_id},#{p_cancle},#{p_o_id}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Payment">
+		DELETE FROM payment WHERE id=#{id}
+
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Payment">
+		UPDATE payment SET 
+		p_num=#{p_num},p_inputdate=#{p_inputdate},p_money_a=#{p_money_a},
+		p_money_b=#{p_money_b},p_point_a=#{p_point_a},p_cancle_money=#{p_cancle_money},
+		p_smoney=#{p_smoney},p_memo=#{p_memo},p_bank=#{p_bank},p_pay=#{p_pay},p_pay_name=#{p_pay_name},
+		p_all_money=#{p_all_money},p_m_id=#{p_m_id},p_pay_yes=#{p_pay_yes},p_g_id=#{p_g_id},
+		p_cancle=#{p_cancle},p_o_id=#{p_o_id}
+		WHERE id=#{id}
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Payment"
+		resultType="int">
+		SELECT COUNT(*) FROM payment
+		<where>
+			<if test="p_pay_name != null and p_pay_name != ''">
+				p_pay_name = #{p_pay_name}
+			</if>
+		</where>
+	</select>
+	
+	
+</mapper>

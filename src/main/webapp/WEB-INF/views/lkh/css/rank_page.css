@@ -1,0 +1,197 @@
+
+    /** 공통 속성 설정*/
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /** float 처리 */
+    .pull-left {
+        float: left;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        float: none;
+    }
+	/** 본문영역 */
+	.body {
+	    width: 100%;
+	    /*background-color: red;*/
+	}
+	
+	/** 본문안에 목록영역 */
+	.product_box {
+	    margin: auto;
+	    width: 1400px;
+	    height: 1200px;
+	    margin-top: 100px;
+	    /*background-color: green;*/
+	}
+	
+	/** 랭크페이지 -시작-*/
+	/** 목록안에 베스트 상품영역 */
+	.best_product {
+	    width: 1400px;
+	    min-height: 1100px;
+	    /*background-color: pink;*/
+	}
+	
+	.best_product2 {
+	    width: 1400px;
+	    min-height: 800px;
+	    margin-bottom: 100px;
+	    float: left;
+	    /*background-color: pink;*/
+	}
+	
+	/** 랭크페이지영역 물품리스트영역 */
+	.object_list1 {
+	    width: 1400px;
+	    /*background-color: blue;*/
+	    border-top: 1px solid rgb(230, 230, 230);
+	    float: left;
+	}
+	
+	/** 랭크페이지영역 */
+	.best_product_title {
+	    display: block;
+	    width: 400px;
+	    height: 50px;
+	    /*background-color: orange;*/
+	
+	    font-size: 25px;
+	    font-weight: bold;
+	    font-family: "고딕";
+	}
+	
+	/** 랭크페이지영역의 전체, 여성, 남성 */
+	.best_product_all {
+	    height: 50px;
+	    width: 40px;
+	    font-weight: bold;
+	    float: left;
+	    /*background-color: purple;*/
+	}
+	
+	.best_product_women {
+	    height: 50px;
+	    width: 40px;
+	    font-weight: bold;
+	    float: left;
+	    /*background-color: purple;*/
+	}
+	
+	.best_product_men {
+	    height: 50px;
+	    width: 40px;
+	    font-weight: bold;
+	    float: left;
+	    /*background-color: purple;*/
+	}
+	
+	.product_list {
+	    width: 1400px;
+	    height: 820px;
+	    /*background-color: green;*/
+	}
+	
+	.product_list_A {
+		display: none;
+	    width: 1400px;
+	    height: 820px;
+	    /*background-color: green;*/
+	}
+	
+	.chu_chu_mo {
+		display: block;
+	}
+	.chu_chu_mo_A {
+		display: none;
+	}
+	
+	/** 상품리스트 */
+	.product1 {
+	    width: 270px;
+	    height: 400px;
+	    /*background-color: silver;*/
+	    margin-right: 10px;
+	}
+	
+	.product2 {
+	    width: 270px;
+	    height: 400px;
+	    /*background-color: silver;*/
+	    margin-top: 20px;
+	    margin-right: 10px;
+	}
+	
+	/** 상품이미지 및 텍스트 */
+	.product_img {
+	    width: 270px;
+	    height: 300px;
+	    /*background-color: yellow;*/
+	}
+	
+	/** 모두보기 버튼 */
+	.all_view {
+	    display: block;
+	    width: 250px;
+	    height: 40px;
+	    text-align: center;
+	    font-weight: bold;
+	    line-height: 40px;
+	    border: 1px solid black;
+	
+	    /*background-color: pink;*/
+	    margin: auto;
+	    margin-top: 40px;
+	}
+	
+	.best_product_title2 {
+	    width: 400px;
+	    height: 50px;
+	    /*background-color: orange;*/
+	    top: 35px;
+	
+	    font-size: 25px;
+	    font-weight: bold;
+	    font-family: "고딕";
+	}
+	
+	.table_c {
+		margin-top: 50px;
+	}
+	
+	/** 테이블 border 안보여서 직접 설정 */
+	
+	.table_e {
+		table-layout:fixed; 
+		margin:0; 
+		padding:0; 
+		font-size: 18px;
+		
+		border-collapse: separate;
+	    border-spacing: 0;
+	    border-top:1px solid black;
+	    border-left:1px solid black;
+	}
+	
+	.table_e td {
+	    border-right: 1px solid black;
+	    border-bottom: 1px solid black; 
+	    padding-top: 20px;
+    }
+	
+	/** 랭크페이지 -끝-*/

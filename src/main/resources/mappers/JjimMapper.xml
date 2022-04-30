@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="JjimMapper">
+	<resultMap id="JjimMap"
+		type="study.spring.trspring.model.Jjim">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="f_user_agent" column="f_user_agent" />
+		<result property="f_browser" column="f_browser" />
+		<result property="f_os" column="f_os" />
+		<result property="f_device" column="f_device" />
+		<result property="f_goods_id" column="f_goods_id" />
+		
+		<result property="g_image_a" column="g_image_a" />
+		<result property="g_name" column="g_name" />
+		<result property="g_brand" column="g_brand" />
+		<result property="g_ori_price" column="g_ori_price" />
+		<result property="g_price" column="g_price" />
+		<result property="g_discount" column="g_discount" />
+	</resultMap>
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Jjim"
+		resultMap="JjimMap">
+		SELECT 
+			f_user_agent ,f_browser , f_os ,f_device ,f_goods_id , 
+			g_image_a , g_name , g_brand , g_ori_price,g_price, g_discount
+		FROM favpage as f , goods as g
+		WHERE g.id = f_goods_id
+	</select>
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Jjim"
+		resultMap="JjimMap">
+		SELECT  id,f_user_agent ,f_browser , f_os ,f_device ,f_goods_id,
+				g_image_a , g_name , g_brand , g_ori_price,g_price, g_discount
+		FROM favpage
+		
+		<where>
+			<if test="f_user_agent != null and f_user_agent != ''">
+				f_user_agent LIKE concat('%', #{f_user_agent}, '%')
+			</if>
+			<if test="f_browser != null and f_browser != ''">
+				AND f_browser LIKE concat('%', #{f_browser}, '%')
+			</if>
+			<if test="f_os != null and f_os != ''">
+				AND f_os LIKE concat('%', #{f_os}, '%')
+			</if>
+			<if test="f_device != null and f_device != ''">
+				AND f_device LIKE concat('%', #{f_device}, '%')
+			</if>
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Jjim"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO favpage (
+		f_user_agent,f_browser,f_os,f_device,f_goods_id,
+		g_image_a , g_name , g_brand , g_ori_price,g_price, g_discount
+		) 
+		VALUES (
+		#{f_user_agent},#{f_browser},#{f_os},#{f_device},#{f_goods_id},
+		#{g_image_a},#{g_name},#{g_brand},#{g_ori_price},#{g_price},#{g_discount}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Jjim">
+		DELETE FROM favpage WHERE id=#{id}
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Jjim">
+		UPDATE favpage SET 
+		f_user_agent=#{f_user_agent},f_browser=#{f_browser},f_os=#{f_os},f_device=#{f_device},f_goods_id=#{f_goods_id},
+		g_image_a=#{g_image_a},g_name=#{g_name},g_brand=#{g_brand},
+		g_ori_price=#{g_ori_price},g_price=#{g_price},g_discount=#{g_discount}
+		WHERE id=#{id}
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Jjim"
+		resultType="int">
+		SELECT COUNT(*) FROM favpage
+		<where>
+			<if test="f_goods_id != null and f_goods_id != ''">
+				f_goods_id LIKE concat('%', #{f_goods_id}, '%')
+			</if>
+		</where>
+	</select>
+</mapper>

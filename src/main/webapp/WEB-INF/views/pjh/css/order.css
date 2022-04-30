@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+* {
+	    	margin:0;
+	    	padding:0;
+	    	text-decoration: none;
+	    	list-style: none;
+    	}
+    	a {
+    	text-decoration: none;}
+    	
+    	 /** body 태그에 기본적으로 적용된 padding, margin을 off시킨다.*/
+  	  body {
+        padding: 0;
+        margin: 0;
+    	}
+
+    /** 부모를 기준으로 크기를 갖기 때문에, body와 html에게도 크기 설정 */
+	    html,
+	    body {
+	        width: 100%;
+	        height: 100%;
+	       	background-color: #f9f9f3;
+	        
+	    }
+
+    	.main {
+    		min-height: 1400px;
+    		width: 1440px;
+    		margin: auto;
+    		background-color: #f9f9f3;
+
+    		
+    	}
+    	   	.bot {
+	    	width: 100%;
+	    	height: 361px;
+	    	background-color: #eeeeee;
+    	}
+    	    	.list {
+    		height: 200px;
+    	
+    		border-bottom: 1px solid #BDBDBD;
+    		margin: 20px 195px 0 195px;
+    	}
+    	.prodwrap {
+    	 display: inline-block;
+    	 float: left;
+    	 width: 151px;
+
+    	 margin-right: 24px;
+ 
+    	}
+		.prodwrap img {
+		width: 150px;
+		height: 150px;
+		margin-top: -30px;
+		margin-left: 50px;
+		}
+    	.title1 {
+    		display: block;
+ 		   	margin-left: 200px;
+			margin-top: 80px; 		   	
+   		}
+   		.box1,
+   		.box2,
+   		.box3,
+   		.box5 {
+   		width: 1000px;
+   		min-height: 242px;
+   		padding: 80px;
+   		margin: 30px auto 30px;
+   		background-color: #fff;
+   		border: 1px solid #BDBDBD;
+   		}
+   		.line {
+   		display: block;
+   		margin: auto;
+   		height: 1px;
+   		width: 700px;
+   		border-top: 1px solid #BDBDBD;
+   		}
+   		.blackLine {
+   		display: block;
+   		margin: auto;
+   		height: 1px;
+   		width: 700px;
+   		border-top: 1px solid #000;
+   		margin-top: 50px;
+   		
+   		}
+   		.box2 h2:nth-child(1),
+   		.box3 h2:nth-child(1) {
+   		margin: -60px 0 10px 130px;
+   		padding: 20px;
+   		display: block;
+   		}
+   		
+   		
+	   	.b1 {
+	   	width: 140px;
+	   	height: 50px;
+	   	margin:auto;
+	   	display: block;
+	   	border: 1px solid #BDBDBD;
+	   	background-color: #f9f9f3; 	
+	   	}
+	   	
+   	
+   		.Ltext {
+   		 font-size: 18px;
+   		 margin:-80px 0 0px 240px;
+   		}
+   		.pSpace img {
+   		 margin: 0 0 0 160px;
+   		 height: 150px;
+   		 width: 150px;
+   		}
+   		.pSpace li {
+   		margin: 10px 0  0 350px;
+   		}
+   		.pSpace li:nth-child(1) {
+   		color: #A4A4A4;
+   		font-weight: bold;
+   		font-size: 0.8em;
+   		}
+   		.pSpace li:nth-child(2) {
+   		font-weight: bold;
+   		}
+   		.pSpace li:nth-child(3) {
+   		 color: #A4A4A4;
+   		font-weight: bold;
+   		font-size: 0.8em;
+   		}
+   		.pSpace li:nth-child(4) {
+   		font-weight: bold;
+   		font-size: 20px;
+   		}
+   		.pSpace ul {
+   		 margin-top: -145px;
+   		}
+   		.txt1 {
+   		display: block;
+   		margin: -10px 150px 0 0;
+   		text-align: right;
+   		}
+   		.txt2 {
+   		margin-top: 1px;
+   		font-size: 20px;
+   		font-weight: bold;
+   		color: #045FB4;
+   		margin: -10px 150px 0 0;
+   		display: block;
+   		text-align: right;
+   		}
+   		.inbox2 {
+   		margin-top: -70px;
+   		}
+   		.inbox3 input {
+		margin: 20px 0 20px 160px;
+   		}
+   		.inbox3 {
+   		margin-top: 40px;
+   		}
+   	
+   		.miniBox {
+   		background-color: #f9f9f3;
+   		width: 600px;
+   		height: 40px;
+   		border: none;
+   		}
+   		.btn1 {
+   		background-color: #fff;
+   		width: 70px;
+   		height: 40px;
+   		border: 1px solid #eee; 
+   		}
+   		
+   		.Orderfin {
+   		margin: 80px 0 0 -80px;
+   		width: 1160px;
+   		height: 50px;
+   		background-color: #000;
+   		color: #fff;
+   		}
+   		
+   		
+.inbox1 {
+	height: 400px;
+}
+    	
+.besong_jungbo {
+	margin-left: 150px;
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.jumun_jungbo {
+	float: left;
+	margin: 20px 500px 0 150px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+ .left_text_adress {
+
+  width: 200px;
+  height: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  float: left;
+  margin-left: 150px;
+  margin-top: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.left_text_adress li {
+	height: 25px;
+	margin-top: 5px;
+}
+
+.right_text_adress {
+	width: 600px;
+	height: 150px;
+	font-size: 15px;
+	float: left;
+	border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+.right_text_adress li:nth-child(1),
+.right_text_adress li:nth-child(2) {
+	height: 25px;
+	margin-top: 5px;
+}
+.right_text_adressA input {
+	width: 200px;
+}
+
+.right_text_adressB
+{
+	height: 100px;
+	margin-top: 10px;
+}
+
+.right_text_adressB input {
+	width: 200px;
+}
+ 
+.right_text_adressB a {
+	
+	 	width: 100px;
+	   	border: 1px solid #BDBDBD;
+	   	background-color: #f9f9f3;
+	   	text-align: center;
+}
+ 
+.text_right_adress {
+	margin-top: 10px;
+}
+
+.b2{
+	   	width: 140px;
+	   	height: 50px;
+	   	margin: 50px 500px 0 150px;
+	   	border: 1px solid #BDBDBD;
+	   	background-color: #f9f9f3; 	
+	   	float: left;
+	   	display: block;
+	   	text-align: center;
+	   	line-height: 50px;
+}
+	   	
+.Rtext {
+	width: 200px;
+  height: 150px;
+  font-size: 15px;
+  font-weight: bold;
+  float: left;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+.Ltext {
+	width: 600px;
+	height: 150px;
+	font-size: 15px;
+	float: left;
+	margin: 20px 0 0 0;
+}	
+
+
+.left_text_line li {
+	height: 25px;
+}
+  .right_text_line li {
+	height: 25px;
+}
+ 
+ 
+ 
+.box5_A {
+	width: 900px;
+	height: 200px;
+	margin: auto;
+}
+
+.kul_je_A {
+	width: 900px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	margin: auto;
+}
+
+
+.inbox5 {
+	width: 450px;
+	height: 350px;
+	float: left;
+}
+
+.inbox5 li{
+	height: 25px;
+}
+.inbox6 {
+	width: 450px;
+	height: 350px;
+	float: left;
+}
+
+.inbox6 li{
+	height: 25px;
+}
+
+.btn_fin_A {
+	width: 1000px;
+	margin: auto;
+	padding: 50px 0;
+}
+
+
+
+
+  	 		

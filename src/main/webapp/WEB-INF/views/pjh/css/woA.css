@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+.clear:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+.women {
+    width: 100%;
+    min-height: 1000px;
+    position: relative;
+}
+
+.women_top {
+    width: 100%;
+    height: 220px;
+    position: relative;
+}
+
+.women_text {
+    width: 1260px;
+    height: 120px;
+    margin: auto;
+    padding: 50px 0 20px 0;
+    border-bottom: 3px solid #000;
+    position: relative;
+}
+
+.wtext {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.wtext1 {
+    width: 500px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.wtext1 li {
+    display: block;
+    width: 40px;
+    height: 25px;
+    padding: 0 5px;
+    background-color: #f9f9f9;
+    float: left;
+    border-radius: 25px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.wtext1 li:first-child {
+    margin-left: 0;
+}
+
+.wtext1 li:nth-child(4),
+.wtext1 li:nth-child(5)  {
+    width: 60px;
+}
+
+
+
+.wtext1 button {
+    font-size: 13px;
+    line-height: 25px;
+    border: none;
+    background: #f9f9f9;
+}
+.wtext1 button:active {
+    border: 1px solid #eee;
+    outline :  #eee solid 1px;
+    background: #f9f9f9;
+}
+
+
+.wtext2 {
+    display: block;
+    width: 100px;
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.wtext2 li {
+    width: 80px;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+}
+
+
+/* 드롭다운 */
+.wtext2_wtext {
+	width: 110px;
+	height: 30px;
+	background-color: #f9f9f9;
+	border: 0;
+	
+}
+.wtext2_wtext:focus {
+    border: 1px solid #ccc;
+    outline-color: #ccc;
+}
+.wtext2_wtext:placeholder {
+    color: #ccc;
+}
+

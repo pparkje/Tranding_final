@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="EmailMapper">
+	<resultMap id="EmailMap"
+		type="study.spring.trspring.model.Email">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="e_sub" column="e_sub" />
+		<result property="e_cont" column="e_cont" />
+		<result property="e_wdate" column="e_wdate" />
+		<result property="e_sdate" column="e_sdate" />
+		<result property="e_men" column="e_men" />
+		<result property="e_passcode" column="e_passcode" />
+	</resultMap>
+	
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Email"
+		resultMap="EmailMap">
+		SELECT id,e_sub,e_cont,e_wdate,e_sdate,e_men,e_passcode
+		FROM email
+		WHERE id = #{id}
+	</select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Email"
+		resultMap="EmailMap">
+		SELECT  id,e_sub,e_cont,e_wdate,e_sdate,e_men,e_passcode 
+		FROM email
+		<where>
+			<if test="e_men != null and e_men != ''">
+				e_men LIKE concat('%', #{e_men}, '%')
+			</if>
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Email"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO email (
+		e_sub,e_cont,e_wdate,e_sdate,e_men,e_passcode
+		) 
+		VALUES (
+		#{e_sub},#{e_cont},#{e_wdate},#{e_sdate},#{e_men},#{e_passcode}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Email">
+		DELETE FROM email  where id = #{id}
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Email">
+		UPDATE email SET 
+		e_sub=#{e_sub},e_cont=#{e_cont},e_wdate=#{e_wdate},e_sdate=#{e_sdate},e_men=#{e_men},e_passcode=#{e_passcode}
+		WHERE id=#{id}
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Email"
+		resultType="int">
+		SELECT COUNT(*) FROM email
+		<where>
+			<if test="e_men != null and e_men != ''">
+				e_men LIKE concat('%', #{e_men}, '%')
+			</if>
+		</where>
+	</select>
+</mapper>

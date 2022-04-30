@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.clearfix:after{
+	content:'';
+	display:block;
+	float:none;
+	clear: both;
+}
+.pull-left {
+    float: left;
+}
+.sale_contents{
+	width:1500px;
+}
+.sale_banner{
+	width:600px;
+	height:100px;
+	margin-top:40px;
+	text-align: center;
+	background-color: #eee;
+	position:relative;
+	left:500px;
+}
+.banner_text{
+	font-size: 40px;
+	position:relative;
+	top:30px;
+}
+.sale_header h2{
+	font-size:20px;
+	margin-left: 100px;
+	margin-top: 40px;
+}
+.gender_select{
+	width:200px;
+	height:80px;
+	position: relative;
+	top:30px;
+	left:100px;
+}
+.gender a{
+	font-style: italic;
+}
+.percent a{
+	font-style: italic;
+}
+.gender-item{
+	width:50%;
+}
+.percent{
+	width:300px;
+	height:100px;
+	position:relative;
+	left:100px;
+}
+.percent_list{
+	width:25%;
+}
+.sale_item_list{
+	width:1500px;
+	border-top:1px solid black;
+}
+.item_list{
+	width:750px;
+	padding-top:20px;
+}
+.item_list li{
+	display:block;
+	text-align: center;
+	padding-top:20px;
+	border-bottom:1px solid #eee;
+	border-left:1px solid #eee;
+}
+.item_list div {
+    font-size: 15px;
+    text-align: center;
+}
+.item_list div:nth-child(4n){
+    color: #7732ff;
+}
+.item_list div:nth-child(5n) {
+    font-weight: bold;
+    text-decoration: line-through;
+    color: #ccc;
+}
+.sale_item_btn{
+	width:200px;
+	text-align: center;
+	margin-top:50px;
+	margin-bottom:50px;
+	position:relative;
+	left:740px;
+}
+.sale_item_btn li{
+	font-size: 20px;
+}
+.sale_item_btn .btn2{
+	position: relative;
+	left:10px;
+}
+
+

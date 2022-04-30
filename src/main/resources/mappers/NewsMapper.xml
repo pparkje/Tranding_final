@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="NewsMapper">
+	<!-- Beans 클래스의 객체이름(id)과 클래스이름(type)을 명시한다. -->
+    <resultMap id="newsMap" type="study.spring.trspring.model.News">
+        <!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+        <result property="id" column="id" />
+        <result property="n_subject" column="n_subject" />
+        <result property="n_image" column="n_image" />
+        <result property="n_cont" column="n_cont" />
+        <result property="n_group" column="n_group" />
+        <result property="n_term1" column="n_term1" />
+        <result property="n_term2" column="n_term2" />
+    </resultMap>
+    
+    
+    <!-- 단일행 조회를 위한 기능 정의 -->
+    <select id="selectItem" parameterType="study.spring.trspring.model.News" resultMap="newsMap">
+        SELECT id, n_subject, n_image, n_cont, n_group, n_term1, n_term2 FROM news WHERE id=#{id};
+    </select>
+	
+	<!-- 다중행 조회를 위한 기능 정의 -->
+    <select id="selectList" parameterType="study.spring.trspring.model.News" resultMap="newsMap">
+        SELECT id, n_subject, n_image, n_cont, n_group, n_term1, n_term2 FROM news
+        <where>
+            <if test="n_subject != null and n_subject != ''">
+                n_subject LIKE concat('%', #{n_subject}, '%')
+            </if>
+            <if test="n_image != null and n_image != ''">
+                AND n_image LIKE concat('%', #{n_image}, '%')
+            </if>
+            <if test="n_cont != null and n_cont != ''">
+                AND n_cont LIKE concat('%', #{n_cont}, '%')
+            </if>
+            <if test="n_group != null and n_group != ''">
+                AND n_group LIKE concat('%', #{n_group}, '%')
+            </if>
+            <if test="n_term1 != null and n_term1 != ''">
+                AND n_term1 LIKE concat('%', #{n_term1}, '%')
+            </if>
+            <if test="n_term2 != null and n_term2 != ''">
+                AND n_term2 LIKE concat('%', #{n_term2}, '%')
+            </if>
+        </where>
+        ORDER BY id DESC
+        
+        <if test="listCount > 0">
+        	LIMIT #{offset}, #{listCount}
+        </if>
+    </select>
+    
+    <!-- 다중행 조회를 위한 기능 정의 -->
+    <select id="selectListB" parameterType="study.spring.trspring.model.News" resultMap="newsMap">
+        SELECT * FROM news
+        <where>
+            <if test="n_subject != null and n_subject != ''">
+                n_subject LIKE concat('%', #{n_subject}, '%')
+            </if>
+            <if test="n_image != null and n_image != ''">
+                AND n_image LIKE concat('%', #{n_image}, '%')
+            </if>
+            <if test="n_cont != null and n_cont != ''">
+                AND n_cont LIKE concat('%', #{n_cont}, '%')
+            </if>
+            <if test="n_group != null and n_group != ''">
+                AND n_group LIKE concat('%', #{n_group}, '%')
+            </if>
+            <if test="n_term1 != null and n_term1 != ''">
+                AND n_term1 LIKE concat('%', #{n_term1}, '%')
+            </if>
+            <if test="n_term2 != null and n_term2 != ''">
+                AND n_term2 LIKE concat('%', #{n_term2}, '%')
+            </if>
+        </where>
+        ORDER BY id ASC
+        
+        <if test="listCount > 0">
+        	LIMIT #{offset}, #{listCount}
+        </if>
+    </select>
+    
+    <!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectListA"
+		parameterType="study.spring.trspring.model.News"
+		resultMap="newsMap">
+		SELECT id , n_subject , n_image , n_cont , n_group , n_term1 , n_term2
+		FROM news
+		
+		<where>
+		
+			<if test="n_group != null and n_group != ''">
+				n_group LIKE concat('%', #{n_group}, '%')
+			</if>
+			
+		</where>
+		
+		ORDER BY id ASC
+		
+	</select>
+	
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem" parameterType="study.spring.trspring.model.News" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO news (n_subject, n_image, n_cont, n_group, n_term1, n_term2) VALUES (#{n_subject}, #{n_image}, #{n_cont}, #{n_group}, #{n_term1}, #{n_term2});
+	</insert>
+	
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem" parameterType="study.spring.trspring.model.News">
+		DELETE FROM news WHERE id=#{id};
+	</delete>
+	
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem" parameterType="study.spring.trspring.model.News">
+		UPDATE news SET n_subject=#{n_subject}, n_image=#{n_image}, n_cont=#{n_cont}, n_group=#{n_group}, n_term1=#{n_term1}, n_term2=#{n_term2} WHERE id=#{id};
+	</update>
+	
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll" parameterType="study.spring.trspring.model.News" resultType="int">
+        SELECT COUNT(*) FROM news
+        <where>
+            <if test="n_subject != null and n_subject != ''">
+                n_subject LIKE concat('%', #{n_subject}, '%')
+            </if>
+            <if test="n_image != null and n_image != ''">
+                AND n_image LIKE concat('%', #{n_image}, '%')
+            </if>
+            <if test="n_cont != null and n_cont != ''">
+                AND n_cont LIKE concat('%', #{n_cont}, '%')
+            </if>
+            <if test="n_group != null and n_group != ''">
+                AND n_group LIKE concat('%', #{n_group}, '%')
+            </if>
+            <if test="n_term1 != null and n_term1 != ''">
+                AND n_term1 LIKE concat('%', #{n_term1}, '%')
+            </if>
+            <if test="n_term2 != null and n_term2 != ''">
+                AND n_term2 LIKE concat('%', #{n_term2}, '%')
+            </if>
+        </where>
+    </select>
+    
+    <!-- 이벤트 조회를 위한 기능 정의 -->
+    <select id="selectListEvent" parameterType="study.spring.trspring.model.News" resultMap="newsMap">
+        SELECT id, n_subject, n_image, n_cont, n_group, n_term1, n_term2 FROM news
+        <where>
+            <if test="n_subject != null and n_subject != ''">
+                n_subject LIKE concat('%', #{n_subject}, '%')
+            </if>
+            <if test="n_image != null and n_image != ''">
+                AND n_image LIKE concat('%', #{n_image}, '%')
+            </if>
+            <if test="n_cont != null and n_cont != ''">
+                AND n_cont LIKE concat('%', #{n_cont}, '%')
+            </if>
+            <if test="n_group != null and n_group != ''">
+                AND n_group LIKE concat('%', #{n_group}, '%')
+            </if>
+            <if test="n_term1 != null and n_term1 != ''">
+                AND n_term1 LIKE concat('%', #{n_term1}, '%')
+            </if>
+            <if test="n_term2 != null and n_term2 != ''">
+                AND n_term2 LIKE concat('%', #{n_term2}, '%')
+            </if>
+        </where>
+        ORDER BY id DESC
+        
+        <if test="listCount > 0">
+        	LIMIT #{offset}, #{listCount}
+        </if>
+    </select>
+
+</mapper>

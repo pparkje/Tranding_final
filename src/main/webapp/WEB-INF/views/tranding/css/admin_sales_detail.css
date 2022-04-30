@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.admin_jumun_sales_detail {
+	width: 1500px;
+	height: 2000px;
+	margin-left: 50px;
+}
+
+.admin_jumun_sales_top {
+	width: 500px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.admin_jumun_sales_main_A {
+	width: 1500px;
+	height: 50px;
+	margin-top: 20px;
+}
+
+.admin_jumun_sales_main_A div:nth-child(n) {
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+	background-color: #eee;
+}
+
+.admin_jumun_sales_main_A div:nth-child(3) {
+	width: 150px;
+}
+
+
+.admin_jumun_sales_main_A div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	width: 150px;
+	margin-right: 232px;
+}
+
+
+.admin_jumun_sales_main_B {
+	width: 1500px;
+	height: 50px;
+}
+
+.admin_jumun_sales_main_B div:nth-child(n) {
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+}
+
+.admin_jumun_sales_main_B div:nth-child(3) {
+	width: 150px;
+}
+
+
+.admin_jumun_sales_main_B div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	width: 150px;
+	margin-right: 232px;
+}
+
+.admin_jumun_sales_main_C {
+	width: 1500px;
+	height: 50px;
+}
+
+.admin_jumun_sales_main_C div:nth-child(n) {
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	border-bottom: 1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+	background-color: #eee;
+}
+
+.admin_jumun_sales_main_C div:nth-child(3) {
+	width: 150px;
+}
+
+
+.admin_jumun_sales_main_C div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	width: 150px;
+	margin-right: 232px;
+}
+
+/* 확인버튼 영역  */
+.admin_jumun_sales_button {
+	width: 300px;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.admin_jumun_sales_button button {
+	width: 60px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 5px; 
+}
+.admin_jumun_sales_button button:focus {
+    border: 1px solid #aaa;
+    outline-color: #aaa;
+}
+.admin_jumun_sales_button button:placeholder {
+    color: #aaa;
+}
+

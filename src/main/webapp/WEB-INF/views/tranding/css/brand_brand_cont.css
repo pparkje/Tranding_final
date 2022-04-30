@@ -1,0 +1,290 @@
+@charset "utf-8";
+
+.rg {
+    float: right;
+}
+
+.lf {
+    float: left;
+}
+
+/* 전체 영역*/
+.brand_brand_middle {
+    width: 100%;
+    height: 4500px;
+    position: relative;
+}
+
+/* 본문 실제 영역*/
+.brand_brand_cont {
+    width: 1260px;
+    height: 4500px;
+    margin: auto;
+
+}
+
+/* 메뉴바 */
+
+.brand_brand_side {
+    width: 230px;
+    height: 670px;
+    float: left;
+}
+
+/* 카테고리 */
+.side_bar1 {
+    width: 200px;
+    height: 650px;
+    margin: auto;
+    border-top: 1px solid #ccc;
+}
+
+.brand_brandside1 {
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.kategorie1 {
+	display: block;
+    font-weight: bold;
+    width: 200px;
+    height: 30px;
+    position: relative;
+}
+
+.kategorie2 {
+    width: 200px;
+    height: 100px;
+    line-height: 30px;
+    display: none;
+}
+/* 버튼 처리 , 슬라이드 처리 */
+.dodoA,.upupA,
+.dodoB,.upupB,
+.dodoC,.upupC,
+.dodoD,.upupD {
+	float:right;
+}
+
+.dodoA {
+	display: block;
+}
+.upupA {
+	display: none;
+}
+.dodoB {
+	display: block;
+}
+.upupB {
+	display: none;
+}
+.dodoC {
+	display: block;
+}
+.upupC {
+	display: none;
+}
+.dodoD {
+	display: block;
+}
+.upupD {
+	display: none;
+}
+
+/* 브랜드 */
+.brand_brandside2 {
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.brand1 {
+	height: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.brand2 {
+    margin-top: 20px;
+    display: none;
+}
+
+.search_text1 {
+    width: 150px;
+    border: 0px;
+    height: 30px;
+    float: left;
+    background-color: #f9f9f9;
+}
+
+.search_text1:focus {
+    outline: none;
+}
+
+.search_text1:placeholder {
+    color: #ccc;
+}
+
+.search_icon1 {
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    background-color: #f9f9f9;
+}
+
+.search_icon1:focus {
+    outline-color: #ccc;
+}
+
+/* 가격 */
+.brand_brandside3 {
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.price1 {
+	height: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+}
+
+.price2 {
+    margin-top: 30px;
+    display: none;
+}
+
+.min_price {
+    width: 80px;
+    height: 30px;
+    border: 0px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.min_price:focus {
+    border: 1px solid #ccc;
+}
+
+.max_price {
+    width: 80px;
+    height: 30px;
+    border: 0px;
+    background-color: #f9f9f9;
+    outline: none;
+}
+
+.max_price:focus {
+    border: 1px solid #ccc;
+}
+
+/* 할인율 */
+.brand_brandside4 {
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.salepok1 {
+	height: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+}
+
+.salepok2 {
+    margin-top: 20px;
+    display: none;
+}
+
+.salepok2 li {
+    line-height: 30px;
+}
+
+.salepok2 a {
+    color: #777;
+}
+
+/* brand_brand 본문 */
+.brand_brand_content img {
+    width: 220px;
+    height: 300px;
+}
+
+.brand_brand_content {
+    width: 960px;
+    height: 4100px;
+    float: left;
+    margin-left: 20px;
+}
+
+.brand_brand_cont1 {
+    width: 960px;
+    height: 4100px;
+}
+
+.brand_brand_content li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 450px;
+    line-height: 25px;
+}
+
+.cont1_1 div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 220px;
+    font-size: 13px;
+}
+
+.cont1_1 div:nth-child(3),
+.cont1_1 div:nth-child(4) {
+    width: 50%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cont1_1 div:nth-child(4) {
+    color: #7732ff;
+}
+
+.cont1_1 div:nth-child(5) {
+    font-weight: bold;
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+/* brand_brand 페이지 번호*/
+.number_page {
+    width: 1260px;
+    height: 100px;
+    float: left;
+}
+
+.number_page li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+}
+
+.pagenum1 {
+    width: 960px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    line-height: 20px;
+}
+
+.pagenum1 img {
+    width: 10px;
+    height: 10px;
+}

@@ -1,0 +1,107 @@
+/** 여기에 작업하세요. */
+
+    .main_place1 {
+        width: 800px;
+        height: 35px;
+        /*background-color: blue;*/
+        margin-bottom: 10px;
+        margin-left: 252px;
+    }
+
+    .main_place2 {
+        width: 800px;
+        height: 35px;
+        /*background-color: green;*/
+        margin-bottom: 30px;
+        margin-left: 252px;
+    }
+
+    .main_place3 {
+        width: 100%;
+        min-width: 1500px;
+        min-height: 200px;
+        /*background-color: red;*/
+        margin-bottom: 25px;
+        margin-left: 252px;
+    }
+
+    /** body_top */
+    .button_property3 {
+        height: 35px;
+        width: 70px;
+        background-color: rgb(80, 80, 140);
+        color: white;
+        border-radius: 5px;
+    }
+
+    .count_name {
+        width: 80px;
+        height: 35px;
+        background-color: rgb(134, 130, 194);
+        font-size: 13px;
+        text-align: center;
+        line-height: 35px;
+        color: white;
+        margin-left: 5px;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    .count_product {
+        width: 50px;
+        height: 35px;
+        background-color: rgb(220, 220, 220);
+        color: rgb(168, 168, 168);
+        text-align: center;
+        line-height: 35px;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    /** 드롭다운 */
+    .total_classification1 {
+        width: 130px;
+        height: 35px;
+    }
+
+    .total_classification2 {
+        width: 100px;
+        height: 35px;
+    }
+
+    .total_classification3 {
+        width: 100px;
+        height: 35px;
+    }
+
+    .total_classification4 {
+        width: 260px;
+        height: 25px;
+    }
+
+    .search_place {
+        width: 150px;
+        height: 31px;
+    }
+
+    .search_button {
+        width: 60px;
+        height: 35px;
+    }
+
+    /** 드롭다운 */
+    .product_name {
+        width: 400px;
+        height: 30px;
+    }
+
+    /** 체크박스크기 */
+    .checkbox_size {
+        width: 15px;
+        height: 15px;
+    }
+
+    .k_input_text_size {
+        width: 130px;
+        height: 20px;
+    }
+
+    /** 여기에 작업하세요. */

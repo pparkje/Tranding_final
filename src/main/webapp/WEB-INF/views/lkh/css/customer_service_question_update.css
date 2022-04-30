@@ -1,0 +1,136 @@
+/** 공통 속성 설정*/
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /** float 처리 */
+    .pull-left {
+        float: left;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        float: none;
+    }
+
+    /** 질문수정 페이지 -시작-*/
+    .body {
+        margin-top: 100px;
+        width: 100%;
+        height: 1200px;
+        /*background-color: yellow;*/
+    }
+
+    .total_place {
+        width: 900px;
+        min-height: 300px;
+        /*background-color: red;*/
+        margin: auto;
+    }
+
+    .title_place {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 30px;
+        /*background-color: gray;*/
+    }
+
+    /** 질문입력 table 영역 */
+    .main_place1 {
+        width: 900px;
+        height: 800px;
+        margin-top: 50px;
+        /*background-color: pink;*/
+    }
+
+    /** 테이블 들여쓰기 및 border 직접 그리기 */
+    .table_q {
+        text-indent: 10px;
+    }
+
+    /** 제목 input CSS */
+    .question_title {
+        width: 500px;
+        height: 25px;
+    }
+
+    /** 질문 input CSS */
+    .question_content {
+        width: 670px;
+        height: 500px;
+    }
+
+    /** 등록버튼CSS */
+    .button_place {
+        width: 170px;
+        height: 40px;
+
+        margin-top: 20px;
+        margin-left: 730px;
+
+        /*background-color: pink;*/
+    }
+
+    .button_q1 {
+        width: 80px;
+        height: 40px;
+
+        font-size: 15px;
+        background-color: gray;
+        color: white;
+
+    }
+
+    .button_q2 {
+        width: 80px;
+        height: 40px;
+
+        font-size: 15px;
+        background-color: black;
+        color: white;
+    }
+    
+    /** 테이블 border 안보여서 직접 설정 */
+    .table_e {
+		table-layout:fixed; 
+		margin:0; 
+		padding:0; 
+		text-indent: 10px;
+		
+		border-collapse: separate;
+	    border-spacing: 0;
+	    border-top:1px solid black;
+	    border-left:1px solid black;
+	}
+	
+	.table_e td {
+	    border-right: 1px solid black;
+	    border-bottom: 1px solid black; 
+	    padding-top: 5px;
+    }
+    
+    /** "질문" 의 위치 box */
+    .question_a {
+    	position: absolute;
+    	/*background-color: red;*/
+    	height: 30px;
+    	
+    	top: 610px;
+    }
+
+
+    /** 질문수정 페이지 -끝-*/

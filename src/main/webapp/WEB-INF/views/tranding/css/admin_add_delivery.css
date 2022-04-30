@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+.admin_add_main {
+	width: 1200px;
+	height: 1200px;
+	margin-left: 250px;
+}
+
+.admin_add_top {
+	width: 250px;
+	height: 100px;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 100px;
+}
+
+.admin_add_main_delivery {
+	width: 1200px;
+	height: 1000px;
+}
+
+/* 추가배송비 상세 메뉴 영역  */
+.admin_add_main_delivery_A {
+	width: 1000px;
+	height: 50px;
+}
+
+.admin_add_main_delivery_top {
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.admin_add_main_delivery_A div {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	background-color: #eee;
+	float: left;
+	text-align: center;
+}
+
+.admin_add_main_delivery_A div:nth-child(1) {
+	width: 30px;
+	height: 50px;
+	line-height: 50px;
+}
+.admin_add_main_delivery_A div:last-child {
+	margin-right: 516px;
+}
+
+/* 추가배송비 상세 표현 영역  */
+.admin_add_main_delivery_B {
+	width: 1000px;
+	height: 50px;
+}
+
+.admin_add_main_delivery_B div {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	float: left;
+	text-align: center;
+}
+
+.admin_add_main_delivery_B div:nth-child(1) {
+	width: 30px;
+	height: 50px;
+	line-height: 50px;
+}
+.admin_add_main_delivery_B div:last-child {
+	margin-right: 516px;
+}
+
+/* 선택삭제 버튼 영역  */
+.admin_add_main_delivery_C {
+	width: 650px;
+	height: 50px;
+	margin-top: 30px;
+	margin-right: 550px;
+}
+
+.admin_add_main_delivery_C button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.admin_add_main_delivery_C button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+
+.admin_add_main_delivery_D {
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.admin_add_main_delivery_E {
+	width: 1000px;
+	height: 450px;
+}
+/* 지역명  */
+.admin_add_main_delivery_area {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_add_main_delivery_area div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_add_main_delivery_area div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_add_main_delivery_area input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 우편번호 시작  */
+.admin_add_main_delivery_startcode {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_add_main_delivery_startcode div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_add_main_delivery_startcode div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_add_main_delivery_startcode input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 우편번호 끝  */
+.admin_add_main_delivery_lastcode {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_add_main_delivery_lastcode div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_add_main_delivery_lastcode div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_add_main_delivery_lastcode input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 추가배송비  */
+.admin_add_main_delivery_plusprice {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_add_main_delivery_plusprice div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_add_main_delivery_plusprice div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_add_main_delivery_plusprice input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+
+
+
+

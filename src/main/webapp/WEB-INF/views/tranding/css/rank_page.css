@@ -1,0 +1,150 @@
+<style type="text/css">
+    /** 공통 속성 설정*/
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /** float 처리 */
+    .pull-left {
+        float: left;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        float: none;
+    }
+/** 본문영역 */
+.body {
+    margin-top: 200px;
+    width: 100%;
+    height: 2203px;
+    /*background-color: red;*/
+}
+
+/** 본문안에 목록영역 */
+.product_box {
+    margin: auto;
+    width: 1400px;
+    height: 1200px;
+    /*background-color: green;*/
+}
+
+/** 베스트상품 -시작-*/
+/** 목록안에 베스트 상품영역 */
+.best_product {
+    width: 1400px;
+    height: 1100px;
+    /*background-color: pink;*/
+    position: relative;
+}
+
+/** 베스트 상품영역 물품리스트영역 */
+.object_list1 {
+    width: 1400px;
+    height: 950px;
+    /*background-color: blue;*/
+    position: absolute;
+    top: 150px;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+/** 베스트 상품영역 */
+.best_product_title {
+    display: block;
+    width: 200px;
+    height: 50px;
+    /*background-color: orange;*/
+    position: absolute;
+    top: 35px;
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "고딕";
+}
+
+/** 베스트 상품영역의 전체, 여성, 남성 */
+.best_product_all {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    top: 100px;
+    font-weight: bold;
+    /*background-color: purple;*/
+}
+
+.best_product_women {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    top: 100px;
+    left: 60px;
+    font-weight: bold;
+    /*background-color: purple;*/
+}
+
+.best_product_men {
+    position: absolute;
+    height: 50px;
+    width: 40px;
+    top: 100px;
+    left: 120px;
+    font-weight: bold;
+    /*background-color: purple;*/
+}
+
+.product_list {
+    width: 1400px;
+    height: 820px;
+    /*background-color: green;*/
+}
+
+/** 상품리스트 */
+.product1 {
+    width: 270px;
+    height: 400px;
+    /*background-color: silver;*/
+    margin-right: 10px;
+}
+
+.product2 {
+    width: 270px;
+    height: 400px;
+    /*background-color: silver;*/
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+/** 상품이미지 및 텍스트 */
+.product_img {
+    width: 270px;
+    height: 300px;
+    background-color: yellow;
+}
+
+/** 모두보기 버튼 */
+.all_view {
+    display: block;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+    border: 1px solid black;
+
+    /*background-color: pink;*/
+    margin: auto;
+    margin-top: 40px;
+}
+/** 베스트상품 -끝-*/

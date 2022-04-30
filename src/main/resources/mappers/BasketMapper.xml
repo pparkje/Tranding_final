@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="BasketMapper">
+	<resultMap id="BasketMap"
+		type="study.spring.trspring.model.Basket">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="b_image" column="b_image" />
+		<result property="b_id" column="b_id" />
+		<result property="b_name" column="b_name" />
+		<result property="b_point" column="b_point" />
+		<result property="b_disprice" column="b_disprice" />
+		<result property="b_oriprice" column="b_oriprice" />
+		<result property="b_discount" column="b_discount" />
+		<result property="b_memprice" column="b_memprice" />
+		<result property="b_g_id" column="b_g_id" />
+		<result property="check" column="check" typeHandler="org.apache.ibatis.type.ArrayTypeHandler" />
+		<result property="b_g_brand" column="b_g_brand" />
+	</resultMap>
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Basket"
+		resultMap="BasketMap">
+		SELECT 
+			id,b_image,b_id,b_name,b_point,b_disprice,b_oriprice,b_discount,b_memprice,b_g_id,b_g_brand
+		FROM basket
+		WHERE id = #{id}
+	</select>
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Basket"
+		resultMap="BasketMap">
+		SELECT  
+			id,b_image,b_id,b_name,b_point,b_disprice,b_oriprice,b_discount,b_memprice,b_g_id,b_g_brand
+		FROM basket
+		
+		<where>
+			<if test="b_id != null and b_id != ''">
+				b_id LIKE concat('%', #{b_id}, '%')
+			</if>
+		</where>
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Basket"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO basket (
+		b_image,b_id,b_name,b_point,b_disprice,b_oriprice,b_discount,b_memprice,b_g_id,b_g_brand
+		) 
+		VALUES (
+		#{b_image},#{b_id},#{b_name},#{b_point},#{b_disprice},#{b_oriprice},#{b_discount},#{b_memprice},#{b_g_id},#{b_g_brand}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Basket">
+		DELETE FROM basket  
+		<where>
+			<if test="id != null and id != ''">
+				id LIKE concat('%', #{id}, '%')
+			</if>
+			
+			<if test="b_id != null and b_id != ''">
+				b_id LIKE concat('%', #{b_id}, '%')
+			</if>
+		</where>
+
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Basket">
+		UPDATE basket SET 
+		b_image=#{b_image},b_id=#{b_id},b_name=#{b_name},
+		b_point=#{b_point},b_disprice=#{b_disprice},b_oriprice=#{b_oriprice},
+		b_discount=#{b_discount},b_memprice=#{b_memprice},b_g_id=#{b_g_id},b_g_brand=#{b_g_brand}
+		WHERE id=#{id}
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Basket"
+		resultType="int">
+		SELECT COUNT(*) FROM basket
+		<where>
+			<if test="b_id != null and b_id != ''">
+				b_id LIKE concat('%', #{b_id}, '%')
+			</if>
+		</where>
+	</select>
+	<!-- 배열값 조회를 위한 기능 정의 -->
+	<select id="Basketitem"
+		parameterType="study.spring.trspring.model.Basket"
+		resultMap="BasketMap">
+		SELECT * FROM basket WHERE id IN 
+		<foreach collection="check" item="check" open="(" close=")" separator=",">
+			#{check}
+		</foreach>
+		
+		ORDER BY id ASC
+        
+        <if test="listCount > 0">
+        	LIMIT #{offset}, #{listCount}
+        </if>
+	</select>
+	
+	<select id="basketCountAll"
+		parameterType="study.spring.trspring.model.Basket"
+		resultType="int">
+		SELECT COUNT(*) FROM basket WHERE id IN 
+		<foreach collection="check" item="check" open="(" close=")" separator=",">
+			#{check}
+		</foreach>
+	</select>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="basketdeleteItem"
+		parameterType="study.spring.trspring.model.Basket">
+		DELETE FROM basket WHERE id IN 
+		<foreach collection="check" item="check" open="(" close=")" separator=",">
+			#{check}
+		</foreach>
+		
+
+	</delete>
+</mapper>

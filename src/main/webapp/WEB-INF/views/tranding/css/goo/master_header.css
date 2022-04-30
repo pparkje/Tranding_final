@@ -1,0 +1,58 @@
+/** 관리자 top css */
+.top_box1 {
+    width: 100%;
+    height: 55px;
+    background-color: rgb(53, 152, 220);
+    border-radius: 5px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.box1_top {
+    display: block;
+    width: auto;
+    height: 55px;
+    position: relative;
+}
+
+.top_box1 .box1_text {
+    display: block;
+    height: 55px;
+    width: 60px;
+    text-align: center;
+    line-height: 55px;
+    /**background-color: red;*/
+    color: white;
+    margin-left: 10px;
+}
+
+.top_box1 div {
+    float: left;
+}
+
+/** float 마감처리 */
+.top_box1:after {
+    content: '';
+    clear: both;
+    float: none;
+    display: block;
+}
+
+/** top 상단 home이미지 */
+.home_img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url("../img/ki_home.PNG");
+    background-repeat: no-repeat;
+    right: 200px;
+}
+
+/** 드롭아웃 css */
+.drop_out {
+    display: block;
+    height: 55px;
+    position: absolute;
+    right: 70px;
+    font-size: 14px;
+}

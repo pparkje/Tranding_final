@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.a_members_list {
+	display: block;
+	margin-left: 20px;
+	margin-top: -8px;
+	width: 130px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: skyblue;
+	border: 1px solid skyblue;
+	float: left;
+	border-radius: 5px;
+}
+.mem_button {
+	margin-left: 200px;
+}

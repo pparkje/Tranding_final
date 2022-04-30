@@ -1,0 +1,286 @@
+@charset "UTF-8";
+* {
+	margin:0;
+	padding:0;
+	text-decoration: none;
+	list-style: none;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+.main {
+	min-height: 1500px;
+	width: 1440px;
+	margin: auto;
+}
+/* 상단 이미지 영역  */
+.rap {
+	padding-top: 100px;
+	width: 1440px;
+	height: 200px;
+}
+.img_rap {
+    width: 400px;
+    height: 100px;
+    margin: auto;
+}
+.rap img {
+    display: block; 
+    width: 90px;
+    height: 90px;
+    border-radius: 60px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-top: 4px;
+}
+.rap h4 {
+    text-align: left;
+	float: left;
+	vertical-align: middle;
+	margin-left: 20px;
+	margin-top: 34px;
+}
+/* 포인트 표현 부분 */
+.text_rap {
+	width: 400px;
+	height: 100px;
+	margin: auto;
+}
+.leftText {
+	font-size: 17px;
+	width: 200px;
+	height: 100px;
+	line-height: 100px;
+	float: left;
+	text-align: center;
+	color: #999;
+}
+.rightText {
+	font-size: 17px;
+	width: 200px;
+	height: 100px;
+	line-height: 100px;
+	float: left;
+	text-align: center;
+}
+
+/* 로그아웃 부분 */
+.text_text_A {
+	width: 400px;
+	height: 50px;
+	margin: auto;
+	color: #fff;
+	margin-top: 20px;
+}
+.text_text_A a {
+	color: #fff;
+}
+
+.btn1 {
+    background-color: #000;
+    color: #fff;
+    display: block;
+    height: 50px;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* 주문내역, 내 정보 관리 */
+.menu {
+	width: 400px;
+	height: 100px;
+	margin: auto;
+	margin-top: 50px;
+}
+.menu img {
+	width: 73px;
+	height: 60px;
+}
+.left_jumun {
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	float: left;
+}
+.right_jung {
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	float: left;
+}
+.line {  		
+   	display: block;
+   	margin: auto;
+   	height: 1px;
+   	width: 700px;
+   	border-top: 1px solid #BDBDBD;
+}
+/* 정보영역 */
+.defaultName {
+	width: 700px;
+	height: 350px;
+	margin: auto;
+}
+.defaultName h2 {
+	width: 700px;
+	height: 70px;
+	margin: auto;
+	line-height:70px;
+	font-size: 30px;
+}
+
+.fir,
+.sec {
+	width : 150px;
+	height: 180px;
+	display: block;
+	float: left;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.fir li,
+.sec li {
+	width : 150px;
+	height: 60px;
+	font-weight: bold;
+	text-align: center;
+	color: #BDBDBD;
+	
+}
+
+.thr,
+.for {
+	width : 200px;
+	height: 180px;
+	display: block;
+	float: left;
+	text-align: center;
+	margin-top: 50px;
+}
+.thr li,
+.for li {
+	width : 150px;
+	height: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.btn2 {
+   	background-color: #000;
+   	color: #fff;
+   	display: block;
+   	height: 30px;
+   	line-height: 30px;
+   	width: 100px;
+   	margin-top: -10px;
+   	margin-left: 20px;
+}
+
+.btn_A a {
+	color: #fff;
+}
+
+.btn_A a:hover {
+	color: #fff;
+}
+
+.btn_A a:link {
+	color: #fff;
+}
+
+.btn_A a:active {
+	color: #fff;
+}
+
+.for input {
+	margin-top: 10px;
+}
+.lineA {  		
+   	display: block;
+   	margin: auto;
+   	height: 1px;
+   	width: 700px;
+   	border-bottom: 1px solid #BDBDBD;
+   	padding-top: 50px;
+}
+/* 추가정보 부분 */
+.optional {
+	width: 700px;
+	height: 250px;
+	margin: auto;
+}
+.optional h2 {
+	width: 700px;
+	height: 70px;
+	margin: auto;
+	line-height:70px;
+	font-size: 30px;
+}
+.fir1,
+.sec1 {
+	width : 150px;
+	height: 180px;
+	display: block;
+	float: left;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.fir1 li,
+.sec1 li {
+	width : 150px;
+	height: 60px;
+	font-weight: bold;
+	text-align: center;
+	color: #BDBDBD;
+	
+}
+
+.thr1,
+.for1 {
+	width : 200px;
+	height: 180px;
+	display: block;
+	float: left;
+	text-align: center;
+	margin-top: 50px;
+}
+.thr1 li,
+.for1 li {
+	width : 150px;
+	height: 60px;
+	font-weight: bold;
+	text-align: center;
+}
+/* 마지막 버튼부분  */
+.btn_btn {
+	width: 700px;
+	height: 100px;
+	margin: auto;
+}
+.btn_btn a {
+   	display: block;
+   	height: 100px;
+   	width: 180px;
+   	margin: auto;
+   	background-color: #000;
+   	color: #fff;
+   	text-align: center;
+   	margin-top: 10px;
+}
+
+
+
+
+

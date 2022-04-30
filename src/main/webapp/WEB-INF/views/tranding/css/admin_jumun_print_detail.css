@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.admin_jumun_print_detail {
+	width: 1500px;
+	height: 1000px;
+	margin-left: 50px;
+}
+.admin_jumun_print_detail_top {
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.admin_jumun_print_detail_main_A {
+	width: 600px;
+	height: 120px;
+	background-color: #eee;
+}
+
+.admin_jumun_print_detail_main_A div {
+	width: 600px;
+	height: 30px;
+	margin-left: 20px;
+	font-size: 13px;
+}
+
+.admin_jumun_print_detail_main_A div:first-child {
+	padding-top: 20px;
+}
+
+.admin_jumun_print_detail_main_B {
+	width: 1500px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.admin_jumun_print_detail_main_C {
+	width: 636px;
+	height: 50px;
+	background-color: #eee;
+}
+
+.admin_jumun_print_detail_main_C div:nth-child(n) {
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+}
+
+.admin_jumun_print_detail_main_C div:nth-child(1) {
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	padding-right: 5px;
+}
+
+.admin_jumun_print_detail_main_C div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+}
+
+.admin_jumun_print_detail_main_D {
+	width: 636px;
+	height: 100px;
+}
+
+.admin_jumun_print_detail_main_D div:nth-child(n) {
+	width: 100px;
+	height: 100px;
+	display: block;
+	text-align: center;
+	line-height: 100px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	border-bottom:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+}
+
+.admin_jumun_print_detail_main_D div:nth-child(1) {
+	width: 200px;
+	height: 50px;
+	line-height: 20px;
+	padding-right: 5px;
+	font-size: 13px;
+	vertical-align: middle;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.admin_jumun_print_detail_main_D div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+}
+
+.admin_jumun_print_detail_main_E {
+	width: 500px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 15px;
+}
+
+

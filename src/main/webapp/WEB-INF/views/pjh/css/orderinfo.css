@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+.jumun_jumun_sang {
+	width: 100%;
+	height: 100%;
+}
+.jumun_jumun_sangA_Z {
+	width: 100%;
+	min-height: 2000px;
+}
+.jumun_jumun_sang_A {
+	width: 1050px;
+	min-height: 400px;
+	margin: auto;
+}
+.jumun_jumun_sang_A_Z_Z {
+	width: 1050px;
+	min-height: 400px;
+}
+.jumun_ju_sang_A {
+	width: 1050px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+}
+.jumun_ju_sang_B {
+	width: 1050px;
+	height: 50px;
+}
+.jumun_ju_sang_B a{
+	width: 60px;
+	height: 20px;
+	background-color: #333;
+	color: #fff;
+	float: right;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 5px;
+}
+.jumun_ju_sang_C {
+	width: 1050px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.jumun_ju_sang_C_A {
+	width: 1050px;
+	height: 45px;
+	line-height: 45px;
+	background-color: #eee;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.jumun_ju_sang_C_A li:nth-child(1){
+	width: 550px;
+	height: 45px;
+	float: left;
+}
+.jumun_ju_sang_C_A li:nth-child(2),
+.jumun_ju_sang_C_A li:nth-child(3){
+	width: 250px;
+	height: 45px;
+	float: left;
+}
+
+.jumun_ju_sang_D{
+	width: 1050px;
+	height: 180px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.jumun_ju_sang_D_A {
+	width: 1050px;
+	height: 180px;
+}
+.jumun_ju_sang_D_A_A {
+	width: 550px;
+	height: 180px;
+	float: left;
+}
+.jumun_ju_sang_D_A_A a {
+	width: 550px;
+	height: 180px;
+	display: block;
+}
+.jumun_ju_sang_D_A_A_A img{
+	width: 150px;
+	height: 150px;
+	margin: 15px 0;
+	float: left;
+}
+.jumun_brand_juk_sang {
+	width: 250px;
+	height: 180px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 65px;
+}
+.jumun_brand_juk_sang_A{
+	width: 250px;
+	height: 180px;
+}
+
+.jumun_brand_juk_sang_A li{
+	width: 250px;
+	height: 30px;
+	font-size: 15px;
+}
+
+
+.jumun_ju_sang_D_A_B,
+.jumun_ju_sang_D_A_C{
+	width: 250px;
+	height: 180px;
+	float: left;
+}
+.jumun_ju_sang_D_A_B div:nth-child(1){
+	
+	margin-top: 55px;
+}
+.jumun_ju_sang_D_A_B div:nth-child(1),
+.jumun_ju_sang_D_A_B div:nth-child(2){
+	width: 250px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.jumun_ju_sang_D_A_C div{
+	width: 250px;
+	height: 180px;
+	line-height: 180px;
+}
+
+
+/* 결제정보란  */
+.jumun_ju_sang_E {
+	width: 1050px;
+	height: 45px;
+	line-height: 45px;
+	background-color: #eee;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	font-weight: bold;
+	
+}
+.jumun_ju_sang_F {
+	width: 1050px;
+	height: 250px;
+	border-bottom: 1px solid #ccc;
+}
+.jumun_ju_sang_F_A {
+	width: 1050px;
+	height: 250px;
+}
+.jumun_ju_sang_F_A li {
+	width: 1050px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 15px;
+	margin-left: 22px;
+}
+
+.jumun_ju_sang_G {
+	width: 1050px;
+	height: 800px;
+	border-bottom: 1px solid #ccc;
+}
+.jumun_ju_sang_G_A {
+	width: 1050px;
+	height: 800px;
+}
+.jumun_ju_sang_G_A li {
+	width: 1050px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 15px;
+	margin-left: 22px;
+}
+

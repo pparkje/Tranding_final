@@ -1,0 +1,160 @@
+@charset "UTF-8";
+.pull-left{
+	float:left;
+}
+.clearfix:after{
+	content:'';
+	display:block;
+	float:none;
+	clear: both;
+}
+
+.sale_manage {
+	width: 960px;
+    height: auto;
+    margin-top:150px;
+    margin-bottom: 10px;
+    margin-left: 250px;
+}
+
+.sale_title {
+	width:960px; 
+	text-align: center;
+	font-weight:bold;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+}
+.sale_title li{
+	width:119px;
+	height:30px;
+	border-right:1px solid black;
+	padding-top:10px;
+	
+}
+.sale_checkbox{
+	width:120px;
+}
+.sale_checkbox label{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.sale_checkbox input{
+	width:100%;
+	height:20px;
+}
+.sale_group{
+	width:119px;
+	border-left: none;
+}
+.sale_group li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+
+.sale_per{
+	width:120px;
+	border-left: none;
+}
+.sale_per li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+.sale_sub{
+	width:120px;
+	border-left: none;
+}
+.sale_sub li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+.sale_img{
+	width:120px;
+	border-left: none;
+}
+.sale_img li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+
+.sale_price{
+	width:120px;
+	border-left: none;
+}
+.sale_price li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+
+.sale_dwprice{
+	width:120px;
+	border-left: none;
+}
+.sale_dwprice li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+
+.sale_gender{
+	width:120px;
+	border-left: none;
+}
+.sale_gender li{
+	display:block;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	padding-top:12px;
+	padding-bottom:13px;
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+.sale_list_btn{
+	width:300px;
+	margin-left:410px;
+	margin-top:250px;
+}
+.sale_list_btn li{
+	height:10px;
+	float:left;
+	padding-left:20px;
+}

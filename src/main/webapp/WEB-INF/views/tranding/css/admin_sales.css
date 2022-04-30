@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.admin_sales {
+	width: 1500px;
+	height: 1000px;
+	margin-left: 250px;
+}
+
+.admin_sales_top {
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.admin_sales_main {
+	width: 600px;
+	height: 200px;
+	background-color: #eee;
+}
+
+.admin_sales_main div {
+	width: 150px;
+	height: 100px;
+	float: left;
+}
+
+.admin_sales_main div:last-child {
+	width: 500px;
+	height: 100px;
+	margin-left: 20px;
+}
+
+.admin_sales_main button {
+	width: 100px;
+	height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 5px; 
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.admin_sales_main button:focus {
+    border: 1px solid #aaa;
+    outline-color: #aaa;
+}
+.admin_sales_main button:placeholder {
+    color: #aaa;
+}
+/* 확인 버튼 영역  */
+
+.sales_button {
+	width: 650px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+}
+
+.sales_button button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.sales_button button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+
+
+

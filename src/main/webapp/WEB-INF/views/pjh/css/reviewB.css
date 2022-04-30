@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+.review_re {
+	width: 100%;
+	min-height: 800px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.review_cont {
+	width: 1440px;
+	min-height: 800px;
+	margin: auto;
+}
+.review_re_re {
+	width: 200px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.review_subject {
+	width: 1440px;
+	height: 100px;
+}
+.review_subject label {
+	width: 1440px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+#review_subject {
+	width: 1440px;
+	height: 30px;
+	font-size: 20px; 
+}
+
+.review_name {
+	width: 1440px;
+	height: 100px;
+}
+.review_name label {
+	width: 1440px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+#review_name {
+	width: 1440px;
+	height: 30px;
+	font-size: 20px; 
+}
+.review_brand {
+	width: 1440px;
+	height: 100px;
+}
+.review_brand label {
+	width: 1440px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+#review_brand {
+	width: 1440px;
+	height: 30px;
+	font-size: 20px; 
+}
+
+.review_cont1 {
+	width: 1440px;
+	height: 400px;
+}
+.review_cont1 label{
+	width: 1440px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+
+#review_contents {
+	width: 1440px;
+	height: 300px;
+	font-size: 20px; 
+}
+
+.review_cont2 {
+	width: 1440px;
+	height: 100px;
+}
+.review_cont2 label{
+	width: 1440px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	float: left;
+}
+
+.review_btn_A {
+	width: 1440px;
+	height: 100px;
+	margin-bottom: 100px;
+}
+.review_reset_A {
+	width: 80px;
+	height: 30px;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #333;
+}
+.review_submit_A {
+	width: 80px;
+	height: 30px;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #333;
+}

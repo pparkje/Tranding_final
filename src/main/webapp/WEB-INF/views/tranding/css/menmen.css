@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+.clear:after {
+    content: '';
+    display: block;
+    float: none;
+    clear: both;
+}
+
+.men {
+    width: 100%;
+    height: 4500px;
+    position: relative;
+    margin-top: -700px;
+}
+
+.men_top {
+    width: 100%;
+    height: 220px;
+    position: relative;
+}
+
+.men_text {
+    width: 1260px;
+    height: 120px;
+    margin: auto;
+    padding: 50px 0 20px 0;
+    border-bottom: 3px solid #000;
+    position: relative;
+}
+
+.mtext {
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.mtext1 {
+    width: 500px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.mtext1 li {
+    display: block;
+    width: 40px;
+    height: 25px;
+    padding: 0 5px;
+    background-color: #f9f9f9;
+    float: left;
+    border-radius: 25px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.mtext1 li:first-child {
+    margin-left: 0;
+}
+
+.mtext1 li:nth-child(4) {
+    width: 90px;
+}
+
+.mtext1 li:nth-child(5) {
+    width: 120px;
+}
+
+.mtext1 a {
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.mtext2 {
+    display: block;
+    width: 100px;
+    height: 200px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.mtext2 li {
+    width: 80px;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+}
+
+/* 드롭다운 */
+.mmtext2_mtext {
+	width: 110px;
+	height: 30px;
+	background-color: #f9f9f9;
+	border: 0;
+}
+.mmtext2_mtext:focus {
+    border: 1px solid #ccc;
+     outline-color: #ccc;
+}
+.mmtext2_mtext:placeholder {
+    color: #ccc;
+}

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.admin_jumun_print_main {
+	width: 1500px;
+	height: 700px;
+	margin-left: 250px;
+}
+
+.admin_jumun_print_main_top {
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.admin_jumun_print_main_topA {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.admin_jumun_print_main_mainA {
+	width: 600px;
+	height: 70px;
+	background-color: #eee;
+}
+
+.admin_jumun_print_main_select {
+	width: 110px;
+	height: 30px;
+	background-color: #f9f9f9;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.admin_jumun_print_main_select:focus {
+    border: 1px solid #ccc;
+    outline-color: #ccc;
+    border-radius: 5px;
+}
+.admin_jumun_print_main_select:placeholder {
+    color: #ccc;
+}
+.admin_jumun_print_main_button {
+	width: 300px;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.admin_jumun_print_main_button {
+	width: 650px;
+	height: 50px;
+	margin-top: 30px;
+}
+
+.admin_jumun_print_main_button button {
+	width: 120px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.admin_jumun_print_main_button button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+
+.admin_jumun_print_main_bottom {
+	width: 600px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 13px;
+	background-color: #eee;
+}
+
+
+
+

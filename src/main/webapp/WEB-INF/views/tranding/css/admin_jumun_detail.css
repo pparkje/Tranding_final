@@ -1,0 +1,977 @@
+@charset "UTF-8";
+
+.admin_jumun_detail {
+	width: 1500px;
+	height: 3000px;
+	margin-left: 250px;
+}
+
+.admin_jumun_detail_top {
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 30px;
+	font-weight: bold;
+}
+.admin_jumun_detail_top_button {
+	width: 650px;
+	height: 50px;
+	background-color: #eee;
+}
+.admin_jumun_detail_top_button div {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	margin-top: 13px;
+}
+
+.admin_jumun_detail_top_button button {
+	padding: 2px 2px;
+	border: 1px solid #ccc;
+	border-radius: 5px; 
+}
+.admin_jumun_detail_top_button button:focus {
+    border: 1px solid #aaa;
+    outline-color: #aaa;
+}
+.admin_jumun_detail_top_button button:placeholder {
+    color: #aaa;
+}
+
+.admin_jumun_detail_main_A {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.admin_jumun_detail_main_B {
+	width: 650px;
+	height: 50px;
+	background-color: #eee;
+	font-size: 13px;
+}
+
+.admin_jumun_detail_main_B div {
+	padding-top: 15px;
+	margin-left: 20px;
+}
+
+/* 주문 상세 내역 영역 */
+
+.admin_jumun_detail_main_C {
+	width: 1300px;
+	height: 250px;
+	margin-top: 20px;
+}
+
+.admin_jumun_detail_main_C_A {
+	width: 1300px;
+	height: 50px;
+}
+
+.admin_jumun_detail_main_C_A div:nth-child(n) {
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+	font-size: 13px;
+	background-color: #eee;
+}
+
+.admin_jumun_detail_main_C_A div:nth-child(1) {
+	width: 30px;
+	height: 50px;
+	line-height: 50px;
+	padding-right: 5px;
+}
+
+.admin_jumun_detail_main_C_A div:nth-child(2){
+	width: 200px;
+	height: 50px;
+}
+
+.admin_jumun_detail_main_C_A div:nth-child(3){
+	width: 200px;
+	height: 50px;
+}
+
+.admin_jumun_detail_main_C_A div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	margin-right: 104px;
+}
+
+.admin_jumun_detail_main_C_B {
+	width: 1300px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_C_B div:nth-child(n) {
+	width: 100px;
+	height: 100px;
+	display: block;
+	text-align: center;
+	line-height: 100px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	border-bottom:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+	font-size: 13px;
+}
+
+.admin_jumun_detail_main_C_B div:nth-child(1) {
+	width: 30px;
+	height: 100px;
+	line-height: 100px;
+	padding-right: 5px;
+}
+
+.admin_jumun_detail_main_C_B div:nth-child(2){
+	width: 200px;
+	height: 100px;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+.admin_jumun_detail_main_C_B div:nth-child(3){
+	width: 200px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_C_B div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	margin-right: 104px;
+}
+
+.admin_jumun_detail_main_C_B span {
+	vertical-align: middle;
+	display: inline-block;
+	padding-top: 10px;
+}
+
+/* 장바구니 상태 변경 영역 */
+.admin_jumun_detail_main_D{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.admin_jumun_detail_main_E {
+	width: 500px;
+	height: 50px;
+	background-color: #eee;
+	margin-bottom: 30px;
+}
+.admin_jumun_detail_main_E div {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	margin-top: 13px;
+}
+
+.admin_jumun_detail_main_E button {
+	padding: 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px; 
+}
+.admin_jumun_detail_main_E button:focus {
+    border: 1px solid #aaa;
+    outline-color: #aaa;
+}
+.admin_jumun_detail_main_E button:placeholder {
+    color: #aaa;
+}
+
+.admin_jumun_detail_main_F{
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+/* 주문상세정보확인 영역  */
+
+.admin_jumun_detail_main_G {
+	width: 1300px;
+	height: 50px;
+}
+
+.admin_jumun_detail_main_G_A div:nth-child(n) {
+	width: 100px;
+	height: 50px;
+	display: block;
+	text-align: center;
+	line-height: 50px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+	font-size: 13px;
+	background-color: #eee;
+}
+
+.admin_jumun_detail_main_G_A div:nth-child(1) {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.admin_jumun_detail_main_G_A div:nth-child(3) {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.admin_jumun_detail_main_G_A div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	margin-right: 104px;
+}
+
+.admin_jumun_detail_main_G_B div:nth-child(n) {
+	width: 100px;
+	height: 100px;
+	display: block;
+	text-align: center;
+	line-height: 100px;
+	border-left: 1px solid rgb(200,200,200);
+	border-top:1px solid rgb(200,200,200);
+	border-bottom:1px solid rgb(200,200,200);
+	padding-left: 5px;
+	float: left;
+	font-size: 13px;
+}
+
+.admin_jumun_detail_main_G_B div:nth-child(1) {
+	width: 150px;
+	height: 100px;
+	line-height: 20px;
+}
+
+.admin_jumun_detail_main_G_B div:nth-child(3) {
+	width: 150px;
+	height: 100px;
+	line-height: 20px;
+}
+
+.admin_jumun_detail_main_G_B_A span{
+	display: block;
+	padding-top: 30px;
+}
+
+.admin_jumun_detail_main_G_B_B span{
+	display: block;
+	padding-top: 30px;
+}
+
+.admin_jumun_detail_main_G_B div:last-child {
+	border-right: 1px solid rgb(200,200,200);
+	margin-right: 104px;
+}
+
+/* 계좌번호 영역  */
+.admin_jumun_detail_main_H_H {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.admin_jumun_detail_main_H {
+	width: 650px;
+	height: 520px;
+	margin-top: 100px;
+}
+
+.admin_jumun_detail_main_H_number {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_H_number div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_H_number div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_H_number_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 입금자 영역  */
+
+.admin_jumun_detail_main_H_input {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_H_input div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_H_input div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_H_input_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 입금확인일시 영역  */
+
+.admin_jumun_detail_main_H_inputdate {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_H_inputdate div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_H_inputdate div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_H_inputdate_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 포인트 영역  */
+
+.admin_jumun_detail_main_H_point {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_H_point div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_H_point div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_H_point_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 결체취소/입금액 영역 */
+
+.admin_jumun_detail_main_H_cancle {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_H_cancle div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_H_cancle div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_H_cancle_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.admin_jumun_detail_main_i {
+	width: 650px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 850px;
+}
+
+.admin_jumun_detail_main_i button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.admin_jumun_detail_main_i button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+	color: #fff;
+}
+
+.admin_jumun_detail_top_button_A {
+	width: 650px;
+	height: 50px;
+	background-color: #eee;
+	margin-top: 100px;
+}
+.admin_jumun_detail_top_button_A div {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.admin_jumun_detail_top_button_A button {
+	padding: 2px 2px;
+	border: 1px solid #ccc;
+	border-radius: 5px; 
+}
+.admin_jumun_detail_top_button_A button:focus {
+    border: 1px solid #aaa;
+    outline-color: #aaa;
+}
+.admin_jumun_detail_top_button_A button:placeholder {
+    color: #aaa;
+}
+
+.admin_jumun_detail_main_j {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.admin_jumun_detail_main_k {
+	width: 1500px;
+	height: 200px;
+}
+
+.admin_jumun_detail_main_k textarea {
+	width: 650px;
+	height: 200px;
+}
+
+.admin_jumun_detail_main_l {
+	width: 650px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 850px;
+}
+
+.admin_jumun_detail_main_l button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.admin_jumun_detail_main_l button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+}
+
+.admin_jumun_detail_main_m {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+/* 주문하신분 영역  */
+
+.admin_jumun_detail_main_n {
+	width: 650px;
+	height: 650px;
+	float: left;
+}
+
+.admin_jumun_detail_main_n_A {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 20px;	
+}
+
+.admin_jumun_detail_main_n_name {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_n_name div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_n_name div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_n_name_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 휴대폰 번호 영역  */
+
+.admin_jumun_detail_main_n_phone {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_n_phone div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_n_phone div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_n_phone_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 주소 영역 */
+
+.admin_jumun_detail_main_n_adress {
+	width: 650px;
+	height: 250px;
+}
+
+.admin_jumun_detail_main_n_adress div:nth-child(1) {
+	width: 200px;
+	height: 250px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_n_adress div:nth-child(2) {
+	width: 300px;
+	height: 250px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_n_adress_A input:nth-child(1) {
+	width: 120px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.admin_jumun_detail_main_n_adress_A button {
+	padding: 5px;
+	margin-left: 20px;
+}
+
+.admin_jumun_detail_main_n_adress_A input:nth-child(3),
+.admin_jumun_detail_main_n_adress_A input:nth-child(4)  {
+	width: 220px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 이메일 영역  */
+
+.admin_jumun_detail_main_n_email {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_n_email div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_n_email div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_n_email_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 받으시는분  */
+
+.admin_jumun_detail_main_o {
+	width: 650px;
+	height: 650px;
+	float: left;
+}
+
+.admin_jumun_detail_main_o_A {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 20px;	
+}
+
+.admin_jumun_detail_main_o_name {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_o_name div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_o_name div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_o_name_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 휴대폰 번호 영역  */
+
+.admin_jumun_detail_main_o_phone {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_o_phone div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_o_phone div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_o_phone_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 주소 영역 */
+
+.admin_jumun_detail_main_o_address {
+	width: 650px;
+	height: 250px;
+}
+
+.admin_jumun_detail_main_o_address div:nth-child(1) {
+	width: 200px;
+	height: 250px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_o_address div:nth-child(2) {
+	width: 300px;
+	height: 250px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_o_address_A input:nth-child(1) {
+	width: 120px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+.admin_jumun_detail_main_o_address_A button {
+	padding: 5px;
+	margin-left: 20px;
+}
+
+.admin_jumun_detail_main_o_address_A input:nth-child(3),
+.admin_jumun_detail_main_o_address_A input:nth-child(4)  {
+	width: 220px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 이메일 영역  */
+
+.admin_jumun_detail_main_o_email {
+	width: 650px;
+	height: 100px;
+}
+
+.admin_jumun_detail_main_o_email div:nth-child(1) {
+	width: 200px;
+	height: 100px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 100px;
+	display: block;
+	float: left;
+	border: 1px solid #444;
+	border-left: none;
+}
+
+.admin_jumun_detail_main_o_email div:nth-child(2) {
+	width: 300px;
+	height: 100px;
+	display: block;
+	float: left;
+	padding-right: 45px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+.admin_jumun_detail_main_o_email_A input {
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 30px;
+}
+
+/* 수정완료 버튼 영역  */
+
+.admin_jumun_detail_main_p {
+	width: 650px;
+	height: 50px;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-right: 850px;
+}
+
+.admin_jumun_detail_main_p button {
+	width: 80px;
+	height: 30px;
+	background-color: rgb(53, 152, 220);
+	border: 1px solid rgb(53, 152, 220);
+	border-radius: 5px;
+}
+
+.admin_jumun_detail_main_p button:focus {
+	background-color: red;
+	border: 1px solid red;
+	outline: red;
+}
+
+
+

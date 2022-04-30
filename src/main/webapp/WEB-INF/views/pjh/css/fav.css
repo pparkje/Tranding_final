@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+
+    	* {
+	    	margin:0;
+	    	padding:0;
+	    	text-decoration: none;
+	    	list-style: none;
+    	}
+    	
+    	 /** body 태그에 기본적으로 적용된 padding, margin을 off시킨다.*/
+  	  body {
+        padding: 0;
+        margin: 0;
+    	}
+
+    /** 부모를 기준으로 크기를 갖기 때문에, body와 html에게도 크기 설정 */
+	    html,
+	    body {
+	        width: 100%;
+	        height: 100%;
+	    }
+    
+    	.mainAAA {
+    		width: 1440px;
+    		margin: auto;
+    		min-height: 400px;
+    	}
+    	.slide {
+    	width: 100%;
+    	height: 360px;
+    	}
+    	#product {
+    		width: 100%;
+    		height: 360px;
+    	}
+    	.imgslide1 {
+    	position: relative;
+    	overflow: hidden;
+    	width: 100%;
+    	height: 360px;
+    	}
+    	.timedeal {
+    		width: 997px;
+    		height: 293px;
+    		margin: 40px auto 20px ;
+    	}
+    	.timetxt {
+    	display: block;
+    	text-align: center;
+    	}
+    	.timeprod {
+    	float: left;
+    	margin-top: 30px;
+    	margin-right: 20px;
+    	width: 310px;
+    	height: 144px;
+    	background-color: #FAFAFA;
+    	}
+    	.timeprodimg img {
+    	width: 109px;
+    	display: block;
+    	}
+    	.bname {
+    	text-overflow: ellipsis;
+    	font-size: 13px;
+    	display: block;
+    	}
+    	.brandtxtA {
+    	width: 135px;
+    	height: 126px;
+    	margin-top: 8px;
+    	position: relative;
+    	float: right;
+    	top: -140px;
+    	right: 40px;
+    	  	
+    	}
+  
+    	.list_A_A {
+    		height: 507px;
+    		margin-top: 66px;
+    		padding: 5px 195px 0 195px;
+    		 
+    	}
+    	.prodwrap_A {
+    	 display: inline-block;
+    	 width: 151px;
+    	 height: 327px;
+    	 background-color:  #eeeeee;
+    	}
+		.prodwrap_A img {
+		width: 151px;
+		height: 201px;
+		}
+		.load {
+		height: 80px;
+		width: 700px;
+		margin: auto;
+		text-align: center;
+		line-height: 80px;
+		border-top: 1px solid #BDBDBD;
+		border-bottom: 1px solid #BDBDBD;
+		margin-top: -20px;
+		}
+    	
+    	.bot {
+	    	width: 100%;
+	    	height: 361px;
+	    	background-color: #eeeeee;
+    	}
+    	.title1 {
+    		display: block;
+ 		   	margin-left: 200px;
+			margin-top: 80px; 		   	
+   		}
+   		.title2 {
+   		
+   			display:block;
+   			margin-left: 200px;
+   			height: 40px;
+			width: 1010px;
+			line-height: 40px;
+			border-top: 1px solid #BDBDBD;
+			border-bottom: 1px solid #BDBDBD;
+			margin-bottom: -20px;
+			margin-top: 10px;
+   		}
+   		.out_brand {
+   			font-size: 13px;
+   			color: #555;
+   			margin: 5px 0 5px 5px;
+   			overflow:hidden;
+		 	text-overflow:ellipsis;
+		 	white-space:nowrap;
+		 	overflow-wrap: normal;
+   		}
+   		.out_name {
+   			font-size: 13px;
+   			color: #555;
+   			overflow:hidden;
+		 	text-overflow:ellipsis;
+		 	white-space:nowrap;
+		 	overflow-wrap: normal;
+		 	margin: 5px 0 5px 5px;
+   		}
+   		.out_price {
+   			font-size: 18px;
+   			color: #111;
+   			font-weight: bold;
+   			margin: 5px 0 5px 5px;
+   		}
+   		.out_dis {
+   			font-size: 18px;
+   			color: #7732ff;
+   			font-weight: bold;
+   			margin: 5px 0 5px 5px;
+   		}
+   		.out_ori {
+   			font-size: 13px;
+   			color: #ccc;
+   			text-decoration: line-through;
+   			margin: 5px 0 5px 5px;
+   		}
+
+.fav_di {
+	width: 180px;
+	min-height: 400px;
+	float: left;
+	margin-right: 24px;
+}
+	
+.fav_bu {
+	width: 180px;
+	height: 330px;
+	float: left;
+	text-align: left;
+}	
+.fav_bu button {
+    border: none;
+}
+.fav_bu button:active {
+    border: 1px solid #eee;
+    outline :  #fff solid 1px;
+}
+
+.fav_buA {
+	width: 151px;
+	height: 25px;
+	float: left;
+	margin-top: 5px;
+}	
+
+.fav_buA button {
+    border: none;
+    background: #eee;
+    width: 151px;
+    margin: auto;
+    text-align: center;
+}
+.fav_buA button:active {
+    border: 1px solid #eee;
+    outline :  #eee solid 1px;
+    background: #eee;
+}
+
+.fav_buB {
+	width: 151px;
+	height: 25px;
+	float: left;
+	margin-top: 5px;
+}	
+.fav_buB button {
+    border: none;
+    background: #ccc;
+     width: 151px;
+    margin: auto;
+    text-align: center;
+}
+.fav_buB button:active {
+    border: 1px solid #ccc;
+    outline :  #ccc solid 1px;
+    background: #ccc;
+}

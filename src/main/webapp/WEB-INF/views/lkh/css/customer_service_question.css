@@ -1,0 +1,233 @@
+/** 공통 속성 설정*/
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /** float 처리 */
+    .pull-left {
+        float: left;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        float: none;
+    }
+
+    /** 고객센터 페이지 -시작-*/
+    .body {
+    	margin-top: 100px;
+        width: 100%;
+        height: 1000px;
+        /*background-color: yellow;*/
+    }
+
+    .total_place {
+        width: 900px;
+        height: 800px;
+        /*background-color: red;*/
+        padding-top: 30px;
+        margin: auto;
+        /*overflow: hidden;*/
+    }
+
+    .text1 {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 30px;
+        /*background-color: gray;*/
+    }
+
+    /** 상담운영 영역 */
+    .customer_img_box {
+        width: 900px;
+        height: 100px;
+        margin-top: 100px;
+        /*background-color: pink;*/
+    }
+
+    .customer_img_box_1 {
+        /*background-color: silver;*/
+        width: 280px;
+        margin: auto;
+        line-height: 20px;
+    }
+
+    .customer_img {
+        margin-top: 4px;
+        margin-right: 20px;
+    }
+
+    /** 자주묻는질문, 공지사항 영역 */
+    .choice_box {
+        height: 50px;
+        margin-top: 50px;
+        /*background-color: yellow;*/
+    }
+
+    .choice_box_1 {
+        height: 50px;
+        width: 444px;
+        margin-right: 5px;
+        border: 1px solid black;
+        border-bottom: none;
+        background-color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .choice_box_2 {
+        height: 50px;
+        width: 445px;
+        border: 1px solid black;
+        border-bottom: none;
+        background-color: rgb(120, 120, 120);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    /** 빈공간 */
+    .question_type_box {
+        height: 20px;
+        /*background-color: rgb(00, 120, 80);*/
+    }
+
+    .type1 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 50px;
+        margin-right: 50px;
+        color: black;
+    }
+
+    .type {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 50px;
+        margin-right: 50px;
+        color: rgb(120, 120, 120);
+    }
+
+    /** 자주 찾는 질문 content영역 */
+    .question_content_box {
+        min-height: 230px;
+        margin-top: 15px;
+        /*background-color: rgb(40, 100, 180);*/
+    }
+
+    .question_title_box {
+        height: 50px;
+        /*background-color: rgb(25, 170, 80);*/
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .question_title_box_1 {
+        width: 100px;
+        /*background-color: rgb(80, 80, 50);*/
+    }
+
+    .question_title_box_2 {
+        width: 400px;
+        /*background-color: rgb(80, 130, 80);*/
+    }
+    
+        .question_title_box_3 {
+        width: 400px;
+        /*background-color: rgb(200, 130, 80);*/
+    }
+
+    /** 질문 content 내용없을 때 */
+    .question_none_place_box {
+        width: 450px;
+        height: 100px;
+        margin: auto;
+        margin-top: 50px;
+        /*background-color: rgb(200, 45, 120);*/
+        text-align: center;
+        font-size: 16px;
+    }
+    
+    /** table css */
+    .text_css1 {
+        text-align: center;
+    }
+
+    /** 페이지넘버 */
+    .page_number {
+        width: 400px;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+        /*background-color: pink;*/
+    }
+
+    /** 검색영역 */
+    .search_box {
+        width: 900px;
+        height: 50px;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+        /*background-color: pink;*/
+    }
+
+    .checkbox_size {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+    .search_size {
+        width: 300px;
+        height: 25px;
+        vertical-align: middle;
+    }
+    
+    /** 테이블 border 안보여서 직접 설정 */
+    .table_e {
+		table-layout:fixed; 
+		margin:0; 
+		padding:0; 
+		
+		border-collapse: separate;
+	    border-spacing: 0;
+	    border-top:1px solid black;
+	    border-left:1px solid black;
+	}
+	
+	.table_e td {
+	    border-right: 1px solid black;
+	    border-bottom: 1px solid black; 
+	    padding-top: 10px;
+    }
+    
+    /** 글쓰기 버튼 */
+    .write_button {
+        margin-left: 20px;
+        width: 60px;
+        height: 30px;
+        background-color: black;
+        color: white;
+    }
+   
+
+    /** 고객센터 페이지 -끝-*/

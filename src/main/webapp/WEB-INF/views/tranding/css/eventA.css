@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+    /** float 처리 */
+    .pull-left {
+        float: left;
+    }
+
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+        float: none;
+    }
+.event{
+	height:auto;
+}
+
+.event_head {
+	width:100%;
+	font-size:20px;
+	margin-bottom:80px;
+	padding-bottom:20px;
+	padding-top:20px;
+	border-bottom:1px solid black;
+	margin-top: 80px;
+}
+.event_head li{
+	width:33%;
+	text-align: center;
+}
+.event_contents {
+	width:100%;
+	margin:auto;
+}
+.event_contents li{
+	width:33%;
+	text-align: center;
+	margin-bottom:50px;
+}
+
+/** 더보기 버튼 */
+.all_view {
+    display: block;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+    border: 1px solid black;
+
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom:50px;
+}
+.all_view a {
+    display: block;
+    width: 250px;
+    height: 40px;
+}
+
+
+
+/* 말줄임 처리  */
+
+.cont_min {
+	width: 400px;
+	height: 150px;
+	margin: auto;
+}
+.cont_min_su {
+	width: 	270px;
+	height: 50px;
+	margin: auto;
+}
+
+.cont_min_chul {
+	width: 250px;
+	height: 20px;
+	line-height: 20px;
+	overflow:hidden;
+ 	text-overflow:ellipsis;
+ 	white-space:nowrap;
+ 	overflow-wrap: normal;
+}
+

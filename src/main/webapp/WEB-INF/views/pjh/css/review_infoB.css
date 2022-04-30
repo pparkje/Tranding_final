@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.info_review {
+	width: 100%;
+	min-height: 600px;
+	margin: 200px 0px;
+}
+.info_review_main {
+	width: 1440px;
+	height: 600px;
+	margin: auto;
+}
+.info_review_cont_A {
+	width: 720px;
+	height: 600px;
+	float: left;
+}
+.info_review_cont_A img{
+	width: 590px;
+	height: 590px;
+	margin: 10px;
+}
+.info_review_cont_B {
+	width: 718px;
+	height: 600px;
+	float: left;
+}
+
+.info_review_subject {
+	width: 720px;
+	height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 100px;
+}
+
+.info_review_member {
+	width: 720px;
+	height: 50px;
+	font-size: 15px;
+	margin-top: 50px;
+}
+.info_review_brand {
+	width: 720px;
+	height: 50px;
+	font-size: 15px;
+}
+.info_review_name {
+	width: 720px;
+	height: 50px;
+	font-size: 15px;
+}
+.info_review_cont_cont {
+	width: 400px;
+	height: 250px;
+	font-size: 15px;
+}

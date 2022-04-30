@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="OrdersMapper">
+	<resultMap id="OrdersMap"
+		type="study.spring.trspring.model.Orders">
+		<!-- Beans의 멤버변수(property)이름과 대상 테이블의 컬럼(column)을 연결한다. -->
+		<result property="id" column="id" />
+		<result property="o_getpeople" column="o_getpeople" />
+		<result property="o_orderpeople" column="o_orderpeople" />
+		<result property="o_sendpeople" column="o_sendpeople" />
+		<result property="o_orderadress" column="o_orderadress" />
+		<result property="o_getadress" column="o_getadress" />
+		<result property="o_sendadress" column="o_sendadress" />
+		<result property="o_phone" column="o_phone" />
+		<result property="o_count" column="o_count" />
+		<result property="o_status" column="o_status" />
+		<result property="o_order_count" column="o_order_count" />
+		<result property="o_allprice" column="o_allprice" />
+		<result property="o_not_money" column="o_not_money" />
+		<result property="o_trans_number" column="o_trans_number" />
+		<result property="o_delivery_comp" column="o_delivery_comp" />
+		<result property="o_input_money" column="o_input_money" />
+		<result property="o_point" column="o_point" />
+		<result property="o_cancle" column="o_cancle" />
+		<result property="o_cancle_money" column="o_cancle_money" />
+		<result property="o_enddate" column="o_enddate" />
+		<result property="o_editdate" column="o_editdate" />
+		<result property="o_product" column="o_product" />
+		<result property="o_m_id" column="o_m_id" />
+		<result property="o_g_id" column="o_g_id" />
+		<result property="o_putdate" column="o_putdate" />
+		<result property="o_photo" column="o_photo" />
+		<result property="o_firstid" column="o_firstid" />
+		<result property="o_first_name" column="o_first_name" />
+		<result property="o_first_brand" column="o_first_brand" />
+	
+	</resultMap>
+	<!-- 단일행 조회를 위한 기능 정의 -->
+	<select id="selectItem"
+		parameterType="study.spring.trspring.model.Orders"
+		resultMap="OrdersMap">
+		SELECT 
+			id , o_getpeople  , o_orderpeople  , o_sendpeople , 
+			o_orderadress , o_getadress , o_sendadress  , o_phone ,o_count , 
+			o_status  , o_order_count   , o_allprice , o_not_money , o_trans_number  , 
+			o_delivery_comp   , o_input_money   , o_point  , o_cancle , o_cancle_money   , 
+			o_enddate    , o_editdate  , o_product    ,o_m_id ,o_g_id ,o_putdate,o_photo ,o_firstid,o_first_name,o_first_brand
+		FROM orders
+		WHERE id = #{id}
+	</select>
+	<!-- 다중행 조회를 위한 기능 정의 -->
+	<select id="selectList"
+		parameterType="study.spring.trspring.model.Orders"
+		resultMap="OrdersMap">
+		SELECT  
+			id , o_getpeople  , o_orderpeople  , o_sendpeople , 
+			o_orderadress , o_getadress , o_sendadress  , o_phone ,o_count , 
+			o_status  , o_order_count   , o_allprice , o_not_money , o_trans_number  , 
+			o_delivery_comp   , o_input_money   , o_point  , o_cancle , o_cancle_money   , 
+			o_enddate    , o_editdate  , o_product ,o_m_id ,o_g_id ,o_putdate,o_photo ,o_firstid,
+			o_first_name,o_first_brand
+		FROM orders
+		
+		<where>
+			<if test="o_getpeople != null and o_getpeople != ''">
+				o_getpeople LIKE concat('%', #{o_getpeople}, '%')
+			</if>
+			<if test="o_orderpeople != null and o_orderpeople != ''">
+				o_orderpeople LIKE concat('%', #{o_orderpeople}, '%')
+			</if>
+			<if test="o_sendpeople != null and o_sendpeople != ''">
+				o_sendpeople LIKE concat('%', #{o_sendpeople}, '%')
+			</if>
+			<if test="o_orderadress != null and o_orderadress != ''">
+				o_orderadress LIKE concat('%', #{o_orderadress}, '%')
+			</if>
+			<if test="o_getadress != null and o_getadress != ''">
+				o_getadress LIKE concat('%', #{o_getadress}, '%')
+			</if>
+			<if test="o_sendadress != null and o_sendadress != ''">
+				o_sendadress LIKE concat('%', #{o_sendadress}, '%')
+			</if>
+			<if test="o_phone != null and o_phone != ''">
+				o_phone LIKE concat('%', #{o_phone}, '%')
+			</if>
+			<if test="o_count != null and o_count != ''">
+				o_count LIKE concat('%', #{o_count}, '%')
+			</if>
+			<if test="o_status != null and o_status != ''">
+				o_status LIKE concat('%', #{o_status}, '%')
+			</if>
+			<if test="o_order_count != null and o_order_count != ''">
+				o_order_count LIKE concat('%', #{o_order_count}, '%')
+			</if>
+			<if test="o_allprice != null and o_allprice != ''">
+				o_allprice LIKE concat('%', #{o_allprice}, '%')
+			</if>
+			<if test="o_not_money != null and o_not_money != ''">
+				o_not_money LIKE concat('%', #{o_not_money}, '%')
+			</if>
+			<if test="o_trans_number != null and o_trans_number != ''">
+				o_trans_number LIKE concat('%', #{o_trans_number}, '%')
+			</if>
+			<if test="o_delivery_comp != null and o_delivery_comp != ''">
+				o_delivery_comp LIKE concat('%', #{o_delivery_comp}, '%')
+			</if>
+			<if test="o_input_money != null and o_input_money != ''">
+				o_input_money LIKE concat('%', #{o_input_money}, '%')
+			</if>
+			<if test="o_point != null and o_point != ''">
+				o_point LIKE concat('%', #{o_point}, '%')
+			</if>
+			<if test="o_cancle != null and o_cancle != ''">
+				o_cancle LIKE concat('%', #{o_cancle}, '%')
+			</if>
+			<if test="o_cancle_money != null and o_cancle_money != ''">
+				o_cancle_money LIKE concat('%', #{o_cancle_money}, '%')
+			</if>
+			<if test="o_enddate != null and o_enddate != ''">
+				o_enddate LIKE concat('%', #{o_enddate}, '%')
+			</if>
+			<if test="o_editdate != null and o_editdate != ''">
+				o_editdate LIKE concat('%', #{o_editdate}, '%')
+			</if>
+			<if test="o_product != null and o_product != ''">
+				o_product LIKE concat('%', #{o_product}, '%')
+			</if>
+			<if test="o_m_id != null and o_m_id != ''">
+				o_m_id LIKE concat('%', #{o_m_id}, '%')
+			</if>
+			<if test="o_g_id != null and o_g_id != ''">
+				o_g_id LIKE concat('%', #{o_g_id}, '%')
+			</if>
+			<if test="o_putdate != null and o_putdate != ''">
+				o_putdate LIKE concat('%', #{o_putdate}, '%')
+			</if>
+			<if test="o_photo != null and o_photo != ''">
+				o_photo LIKE concat('%', #{o_photo}, '%')
+			</if>
+			<if test="o_firstid != null and o_firstid != ''">
+				o_firstid LIKE concat('%', #{o_firstid}, '%')
+			</if>
+			<if test="o_first_name != null and o_first_name != ''">
+				o_first_name LIKE concat('%', #{o_first_name}, '%')
+			</if>
+			<if test="o_first_brand != null and o_first_brand != ''">
+				o_first_brand LIKE concat('%', #{o_first_brand}, '%')
+			</if>
+		</where>
+		
+		
+		
+		ORDER BY id ASC
+		
+		<if test="listCount > 0" >
+		LIMIT #{offset}, #{listCount}
+		</if>
+	</select>
+	<!-- 데이터 저장을 위한 기능 정의 -->
+	<insert id="insertItem"
+		parameterType="study.spring.trspring.model.Orders"
+		useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO orders (
+		o_getpeople  , o_orderpeople  , o_sendpeople , 
+			o_orderadress , o_getadress , o_sendadress  , o_phone ,o_count , 
+			o_status  , o_order_count   , o_allprice , o_not_money , o_trans_number  , 
+			o_delivery_comp   , o_input_money   , o_point  , o_cancle , o_cancle_money   , 
+			o_enddate    , o_editdate  , o_product , o_m_id ,o_g_id ,o_putdate ,o_photo ,o_firstid,
+			o_first_name,o_first_brand
+		) 
+		VALUES (
+		#{o_getpeople},#{o_orderpeople},#{o_sendpeople},
+		#{o_orderadress},#{o_getadress},#{o_sendadress},#{o_phone},
+		#{o_count},#{o_status},#{o_order_count},#{o_allprice},#{o_not_money},
+		#{o_trans_number},#{o_delivery_comp},#{o_input_money},#{o_point},#{o_cancle},
+		#{o_cancle_money},#{o_enddate},#{o_editdate},#{o_product},#{o_m_id},#{o_g_id},#{o_putdate},
+		#{o_photo} ,#{o_firstid},#{o_first_name},#{o_first_brand}
+		)
+	</insert>
+	<!-- 데이터 삭제를 위한 기능 정의 -->
+	<delete id="deleteItem"
+		parameterType="study.spring.trspring.model.Orders">
+		DELETE FROM orders WHERE id=#{id}
+
+	</delete>
+	<!-- 데이터 갱신을 위한 기능 정의 -->
+	<update id="updateItem"
+		parameterType="study.spring.trspring.model.Orders">
+		UPDATE orders SET 
+		o_getpeople=#{o_getpeople},o_orderpeople=#{o_orderpeople},o_sendpeople=#{o_sendpeople},
+		o_orderadress=#{o_orderadress},o_getadress=#{o_getadress},o_sendadress=#{o_sendadress},
+		o_phone=#{o_phone},o_count=#{o_count},o_status=#{o_status},o_order_count=#{o_order_count},
+		o_allprice=#{o_allprice},o_not_money=#{o_not_money},o_trans_number=#{o_trans_number},
+		o_delivery_comp=#{o_delivery_comp},o_input_money=#{o_input_money},o_point=#{o_point},
+		o_cancle=#{o_cancle},o_cancle_money=#{o_cancle_money},o_enddate=#{o_enddate},
+		o_editdate=#{o_editdate},o_product=#{o_product},o_m_id=#{o_m_id},o_g_id=#{o_g_id},o_putdate=#{o_putdate},
+		o_photo=#{o_photo} ,o_firstid=#{o_firstid},o_first_name=#{o_first_name},o_first_brand=#{o_first_brand}
+		WHERE id=#{id}
+	</update>
+	<!-- 조건에 맞는 데이터 수를 집계하여 int 타입으로 반환한다. count , max , min , sum , avg 함수를 
+		사용한 경우 Mapper 에서는 resultMap이 아닌 resultType 으로 반환한다. -->
+	<!-- 데이터 수 조회하기 -->
+	<select id="selectCountAll"
+		parameterType="study.spring.trspring.model.Orders"
+		resultType="int">
+		SELECT COUNT(*) FROM orders
+		<where>
+			<if test="o_getpeople != null and o_getpeople != ''">
+				o_getpeople LIKE concat('%', #{o_getpeople}, '%')
+			</if>
+			<if test="o_orderpeople != null and o_orderpeople != ''">
+				o_orderpeople LIKE concat('%', #{o_orderpeople}, '%')
+			</if>
+			<if test="o_sendpeople != null and o_sendpeople != ''">
+				o_sendpeople LIKE concat('%', #{o_sendpeople}, '%')
+			</if>
+			<if test="o_orderadress != null and o_orderadress != ''">
+				o_orderadress LIKE concat('%', #{o_orderadress}, '%')
+			</if>
+			<if test="o_getadress != null and o_getadress != ''">
+				o_getadress LIKE concat('%', #{o_getadress}, '%')
+			</if>
+			<if test="o_sendadress != null and o_sendadress != ''">
+				o_sendadress LIKE concat('%', #{o_sendadress}, '%')
+			</if>
+			<if test="o_phone != null and o_phone != ''">
+				o_phone LIKE concat('%', #{o_phone}, '%')
+			</if>
+			<if test="o_count != null and o_count != ''">
+				o_count LIKE concat('%', #{o_count}, '%')
+			</if>
+			<if test="o_status != null and o_status != ''">
+				o_status LIKE concat('%', #{o_status}, '%')
+			</if>
+			<if test="o_order_count != null and o_order_count != ''">
+				o_order_count LIKE concat('%', #{o_order_count}, '%')
+			</if>
+			<if test="o_allprice != null and o_allprice != ''">
+				o_allprice LIKE concat('%', #{o_allprice}, '%')
+			</if>
+			<if test="o_not_money != null and o_not_money != ''">
+				o_not_money LIKE concat('%', #{o_not_money}, '%')
+			</if>
+			<if test="o_trans_number != null and o_trans_number != ''">
+				o_trans_number LIKE concat('%', #{o_trans_number}, '%')
+			</if>
+			<if test="o_delivery_comp != null and o_delivery_comp != ''">
+				o_delivery_comp LIKE concat('%', #{o_delivery_comp}, '%')
+			</if>
+			<if test="o_input_money != null and o_input_money != ''">
+				o_input_money LIKE concat('%', #{o_input_money}, '%')
+			</if>
+			<if test="o_point != null and o_point != ''">
+				o_point LIKE concat('%', #{o_point}, '%')
+			</if>
+			<if test="o_cancle != null and o_cancle != ''">
+				o_cancle LIKE concat('%', #{o_cancle}, '%')
+			</if>
+			<if test="o_cancle_money != null and o_cancle_money != ''">
+				o_cancle_money LIKE concat('%', #{o_cancle_money}, '%')
+			</if>
+			<if test="o_enddate != null and o_enddate != ''">
+				o_enddate LIKE concat('%', #{o_enddate}, '%')
+			</if>
+			<if test="o_editdate != null and o_editdate != ''">
+				o_editdate LIKE concat('%', #{o_editdate}, '%')
+			</if>
+			<if test="o_product != null and o_product != ''">
+				o_product LIKE concat('%', #{o_product}, '%')
+			</if>
+			<if test="o_m_id != null and o_m_id != ''">
+				o_m_id LIKE concat('%', #{o_m_id}, '%')
+			</if>
+			<if test="o_g_id != null and o_g_id != ''">
+				o_g_id LIKE concat('%', #{o_g_id}, '%')
+			</if>
+			<if test="o_putdate != null and o_putdate != ''">
+				o_putdate LIKE concat('%', #{o_putdate}, '%')
+			</if>
+			<if test="o_photo != null and o_photo != ''">
+				o_photo LIKE concat('%', #{o_photo}, '%')
+			</if>
+			<if test="o_firstid != null and o_firstid != ''">
+				o_firstid LIKE concat('%', #{o_firstid}, '%')
+			</if>
+			<if test="o_first_name != null and o_first_name != ''">
+				o_first_name LIKE concat('%', #{o_first_name}, '%')
+			</if>
+			<if test="o_first_brand != null and o_first_brand != ''">
+				o_first_brand LIKE concat('%', #{o_first_brand}, '%')
+			</if>
+		</where>
+	</select>
+	
+</mapper>
